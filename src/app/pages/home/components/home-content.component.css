@@ -1,0 +1,77 @@
+.layout {
+    min-height: 100vh;
+}
+
+nz-content {
+    padding: 0 50px;
+    margin-top: 64px;
+    margin-bottom: 100px;
+}
+
+nz-breadcrumb {
+    margin: 16px 0;
+}
+
+.inner-content {
+    background: #fff;
+    padding: 24px 24px 4px 24px;
+    min-height: 280px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.informations {
+    text-align: center;
+}
+
+.qrcode_center {
+    display: flex;
+}
+
+.bouton_center {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+}
+
+.bouton_margin {
+    margin-top: 15px;
+}
+
+.position_icon {
+    display: flex;
+    margin-left: 2px
+}
+
+::ng-deep .anticon>svg {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.ant-breadcrumb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.suppressionbottom {
+    margin-bottom: 0px;
+}
+
+@media (max-width: 720px) {
+    nz-content {
+        padding: 0 30px;
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+}
+
+@media (max-width: 430px) {
+    nz-content {
+        padding: 0 10px;
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+}
