@@ -1,18 +1,18 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     loadChildren: () =>
-      import('./pages/workspace/workspace.module').then(
-        (m) => m.WorkspaceModule
+      import("./pages/workspace/workspace.module").then(
+        (m) => m.WorkspaceModule,
       ),
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

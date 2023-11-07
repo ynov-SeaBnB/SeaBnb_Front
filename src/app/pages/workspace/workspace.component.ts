@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'seabnb-workspace',
+  selector: "seabnb-workspace",
   template: ` <router-outlet></router-outlet> `,
 })
-export class WorkspaceComponent { }
+export class WorkspaceComponent {}

@@ -1,18 +1,18 @@
-import { Routes } from '@angular/router';
+import { Routes } from "@angular/router";
 
-import { WorkspaceComponent } from './workspace.component';
+import { WorkspaceComponent } from "./workspace.component";
 
 export const workspaceRoutes: Routes = [
   {
-    path: '',
+    path: "",
     component: WorkspaceComponent,
     children: [
       {
-        path: 'home',
+        path: "home",
         loadChildren: () =>
-          import('../home/home.module').then((m) => m.HomeModule),
+          import("../home/home.module").then((m) => m.HomeModule),
       },
-      { path: '**', redirectTo: 'error' },
+      { path: "**", redirectTo: "error" },
     ],
   },
 ];

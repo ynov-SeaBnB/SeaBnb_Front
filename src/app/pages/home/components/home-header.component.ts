@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'home-header',
+  selector: "home-header",
   template: ``,
 })
-export class HomeHeaderComponent { }
+export class HomeHeaderComponent {}
