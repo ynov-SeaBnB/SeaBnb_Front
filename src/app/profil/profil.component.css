@@ -1,0 +1,92 @@
+::ng-deep body {
+    background-color: rgb(255, 255, 255);
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 20px;
+}
+.grid-child{
+    margin-top: 100px;
+}
+
+.pp{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+input[type=text] {
+	appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #274F8B;
+	background: rgba(#274F8B, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+    margin-right: 50px;   
+}
+input[type=email]{
+    appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #274F8B;
+	background: rgba(#274F8B, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+input[type=password]{
+    appearance: none;
+	border: none;
+	outline: none;
+	border-bottom: .2em solid #274F8B;
+	background: rgba(#274F8B, .2);
+	border-radius: .2em .2em 0 0;
+	padding: .4em;
+   margin-top: 50px;
+}
+select{
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid #274F8B;
+    background: rgba(#274F8B, .2);
+    border-radius: .2em .2em 0 0;
+    padding: .4em;
+    margin-top: 50px;
+}
+.button-save {
+    background-color: #274F8B;
+    border-radius: 4px;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 34px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 150px;
+    margin-top: 30px;
+  }
+  
+  .button-save:hover,
+  .button-save:focus {
+    opacity: .75;
+  }
