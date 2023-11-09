@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "SeaBnB": {
+    "SeaBnB_Front": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sea-bn-b",
+            "outputPath": "dist/sea-bn-b-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "SeaBnB:build:production"
+              "browserTarget": "SeaBnB_Front:build:production"
             },
             "development": {
-              "browserTarget": "SeaBnB:build:development"
+              "browserTarget": "SeaBnB_Front:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "SeaBnB:build"
+            "browserTarget": "SeaBnB_Front:build"
           }
         },
         "test": {
@@ -94,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "62c66238-8ffb-43e1-bed7-a73781f4e65d"
   }
 }
