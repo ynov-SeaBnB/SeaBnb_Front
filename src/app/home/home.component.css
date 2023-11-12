@@ -37,10 +37,20 @@
 
 .search {
     display: flex;
-    padding: 15px;
+    padding: 10px;
+    align-items: center;
     border: 1px solid #ccc;
     border-radius: 30px;
     text-decoration: none;
+}
+
+.icon-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #274E8C;
+    overflow: hidden;
 }
 
 .user-profile {
