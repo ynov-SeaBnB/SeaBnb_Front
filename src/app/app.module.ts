@@ -9,6 +9,8 @@ import { ProfilComponent } from './profil/profil.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {HttpClientModule} from "@angular/common/http";
+import { NgIconsModule } from '@ng-icons/core';
+import {heroUser, heroLockClosed, heroEnvelope, heroLanguage} from '@ng-icons/heroicons/outline';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgIconsModule.withIcons({heroUser, heroEnvelope, heroLockClosed, heroLanguage}),
   ],
   providers: [],
   bootstrap: [AppComponent]
