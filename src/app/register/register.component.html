@@ -6,25 +6,36 @@
   <title>Sign Up</title>
 </head>
 <body>
-
 <div class="signup-card">
   <h2 class="signup-card-title">Sign up to SeaBnB</h2>
-  <form>
-    <input type="text" placeholder="First Name" required>
-    <input type="text" placeholder="Last Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="password" placeholder="Password" required>
-    <input type="password" placeholder="Confirm password" required>
-    <input type="date" required>
-    <button type="submit">Sign Up</button>
-<!--    <div class="divider-or">-->
-<!--      <span>or</span>-->
-<!--    </div>-->
-<div class="login-link-container">
-    <a href="/login" class="login-link"> Login page </a>
-</div>
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <input type="text" placeholder="First Name" formControlName="firstName" required>
+    <input type="text" placeholder="Last Name" formControlName="lastName" required>
+    <input type="email" placeholder="Email Address" formControlName="email" required>
+    <input type="password" placeholder="Password" formControlName="password" required>
+    <input type="password" placeholder="Confirm password" formControlName="confirmPassword" required>
+    <input type="date" formControlName="birthDate" required>
+    <button type="submit" [disabled]="!signUpForm.valid">Sign Up</button>
   </form>
+</div>
 
+<!-- Field-level error checking -->
+<div *ngIf="signUpForm.get('password')?.errors?.['minLength']">
+  Password must be at least 8 characters long.
+</div>
+<div *ngIf="signUpForm.get('password')?.errors?.['passwordComplexity']">
+  Password is not complex enough.
+</div>
+
+<!-- For form-level errors -->
+<div *ngIf="signUpForm.errors?.['passwordMatch']">
+  Passwords do not match.
+</div>
+<div *ngIf="signUpForm.errors?.['underage']">
+  You must be at least 18 years old.
 </div>
 </body>
 </html>
+
+
+

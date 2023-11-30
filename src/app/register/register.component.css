@@ -9,6 +9,11 @@ body {
    margin: 0;
  }
 
+button:disabled {
+  background-color: grey;
+  color: white;
+}
+
 .signup-card {
   width: 400px;
   padding: 20px;
