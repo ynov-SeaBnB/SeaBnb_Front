@@ -120,8 +120,12 @@
 /*En dessous Css pour les Filtres*/
 
 .horizontal-line {
-    border-top: 0.5px solid #000;
-    width: 200%;
+    border-top: 1px solid #EFEFEF;
+    width: 100vw;
+    margin-top: 6em;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .filter-container {
@@ -153,4 +157,35 @@
 
 .filter-item:hover {
     background-color: #f0f0f0;
+}
+
+
+/*En dessous css pour les bateaux*/
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 6em;
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image-caption {
+    padding: 8px;
+    text-align: center;
+}
+
+.image-caption p {
+    margin: 4px 0;
 }
