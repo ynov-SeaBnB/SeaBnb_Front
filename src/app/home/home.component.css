@@ -26,13 +26,19 @@
 }
 
 .logo3 {
-    height: 13px;
-    margin-left: 20px;
-    margin-right: 10px;
+    font-size: 1.19em;
+    margin-left: 5px;
+    margin-right: 0.4em;
+    color: black;
 }
 
 .logo4 {
     height: 30px;
+}
+
+.logo5 {
+    font-size: 2.2em;
+    color: black;
 }
 
 .search {
@@ -53,14 +59,22 @@
     overflow: hidden;
 }
 
+.right-bar {
+    display: flex;
+    align-items: center;
+}
+
 .user-profile {
     display: flex;
     align-items: center;
 }
 
-.user-profile_menu {
+.sectionId {
     display: flex;
     align-items: center;
+}
+
+.user-profile_menu {
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 30px;
@@ -76,7 +90,7 @@
 }
 
 .link:last-child {
-    margin-right: 0;
+    margin-right: 2em;
 }
 
 .link+.link {
@@ -99,4 +113,44 @@
 .user-profile .link {
     font-weight: 400;
     color: #636363;
+}
+
+
+
+/*En dessous Css pour les Filtres*/
+
+.horizontal-line {
+    border-top: 0.5px solid #000;
+    width: 200%;
+}
+
+.filter-container {
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-bottom: 1em;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    margin-top: 2em;
+}
+
+.filter-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.filter-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.filter-item {
+    display: inline-block;
+    margin-right: 1em;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-item:hover {
+    background-color: #f0f0f0;
 }

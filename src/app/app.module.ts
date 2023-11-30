@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
+import { NgIconsModule } from '@ng-icons/core';
+import { heroUser, heroLockClosed, heroEnvelope, heroLanguage, heroBars3, heroUserCircle } from '@ng-icons/heroicons/outline';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { ProfilComponent } from './profil/profil.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgIconsModule.withIcons({ heroUser, heroEnvelope, heroLockClosed, heroLanguage, heroBars3, heroUserCircle }),
   ],
   providers: [],
   bootstrap: [AppComponent]
