@@ -6,12 +6,17 @@ import { HomeComponent } from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import {HttpClientModule} from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { NgIconsModule } from '@ng-icons/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import {heroUser, heroLockClosed, heroEnvelope, heroLanguage} from '@ng-icons/heroicons/outline';
-
+import {
+  heroEnvelope,
+  heroLanguage,
+  heroLockClosed,
+  heroUser,
+} from '@ng-icons/heroicons/outline';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -27,9 +32,15 @@ import {heroUser, heroLockClosed, heroEnvelope, heroLanguage} from '@ng-icons/he
     ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
-    NgIconsModule.withIcons({heroUser, heroEnvelope, heroLockClosed, heroLanguage}),
+    BrowserAnimationsModule,
+    NgIconsModule.withIcons({
+      heroUser,
+      heroEnvelope,
+      heroLockClosed,
+      heroLanguage,
+    }),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
