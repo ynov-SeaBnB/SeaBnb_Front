@@ -7,7 +7,9 @@ import { ProfilComponent } from './profil/profil.component';
 import { DescriptionComponent } from './description/description.component';
 import { OwnerComponent } from './owner/owner.component';
 import { NgIconsModule } from '@ng-icons/core';
-import { heroUsers } from '@ng-icons/heroicons/outline';
+import {heroUser, heroLockClosed, heroEnvelope, heroLanguage, heroCamera, heroChevronRight} from '@ng-icons/heroicons/outline';
+
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,7 @@ import { heroUsers } from '@ng-icons/heroicons/outline';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgIconsModule.withIcons({heroUsers}),
+    NgIconsModule.withIcons({heroUser, heroEnvelope, heroLockClosed, heroLanguage, heroCamera, heroChevronRight}),
   ],
   providers: [],
   bootstrap: [AppComponent]
