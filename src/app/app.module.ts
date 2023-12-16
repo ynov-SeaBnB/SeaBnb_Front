@@ -7,17 +7,20 @@ import { HomeComponent } from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
 import { NgIconsModule } from '@ng-icons/core';
 import { heroUser, heroLockClosed, heroEnvelope, heroLanguage, heroBars3, heroUserCircle } from '@ng-icons/heroicons/outline';
+import { heroStarSolid } from '@ng-icons/heroicons/solid';
+import { BoatsComponent } from './boats/boats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProfilComponent
+    ProfilComponent,
+    BoatsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgIconsModule.withIcons({ heroUser, heroEnvelope, heroLockClosed, heroLanguage, heroBars3, heroUserCircle }),
+    NgIconsModule.withIcons({ heroUser, heroEnvelope, heroLockClosed, heroLanguage, heroBars3, heroUserCircle, heroStarSolid }),
   ],
   providers: [],
   bootstrap: [AppComponent]
