@@ -1,11 +1,42 @@
 ::ng-deep body {
     background-color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+nav{
+    display: flex;
+    height: 6em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.logo{
+    display: flex;
+    width: 18em;
+    height: 18em;
+    margin-left: -5em;
+    margin-top: -6.2em;
+}
+nav input[type=button]{
+    appearance: none;
+	border: none;
+	outline: none;
+	border-radius: .2em .2em 0 0;
+    font-size: 1.8em;
+    cursor: pointer;
+    touch-action: manipulation;
+    margin: auto;
+    margin-left: -5em;
+    background-color: #fff;
+}
+nav input[type=button]:hover{
+    color: #274F8B;
+}
+
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-gap: 1.25em;
-    margin-top: 6.25em;
     border-top: solid;
     border-color: #e3e3e3;
     overflow: hidden !important;
@@ -28,15 +59,10 @@ img{
     border-radius: 50%;
     margin: auto;
 }
-.btn{
-    display: flex;
-    font-size: 1.2em;
-    margin: auto;
-    margin-top: -7em;
-}
+
 .form{
     margin: 1em;
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 .row{
     display: flex;
@@ -49,15 +75,16 @@ img{
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-    padding: 2em;
+    padding: 0.5em;
   }
 .icon{
     vertical-align: -20%;
+    padding-right: 0.3em;
 }
 .space{
     padding: 2em;
 }
-input[type=text] {
+.form .row .column input[type=text] {
 	border: none;
 	outline: none;
 	border-bottom: .2em solid #274F8B;
@@ -65,6 +92,10 @@ input[type=text] {
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
     font-size: 1.125em;
+    box-shadow: 10px 5px 5px #e3e3e3;
+}
+*:disabled{
+    background-color: #fff;
 }
 input[type=email]{
     appearance: none;
@@ -75,6 +106,7 @@ input[type=email]{
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
     font-size: 1.125em;
+    box-shadow: 10px 5px 5px #e3e3e3;
 }
 input[type=password]{
     appearance: none;
@@ -85,6 +117,7 @@ input[type=password]{
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
     font-size: 1.125em;
+    box-shadow: 10px 5px 5px #e3e3e3;
 }
 input[type=date]{
     appearance: none;
@@ -95,6 +128,7 @@ input[type=date]{
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
     font-size: 1.125em;
+    box-shadow: 10px 5px 5px #e3e3e3;
 }
 select{
     appearance: none;
@@ -105,16 +139,18 @@ select{
     border-radius: .2em .2em 0 0;
     padding: .4em;
     font-size: 1.125em;
+    box-shadow: 10px 5px 5px #e3e3e3;
 }
 .button-save {
     background-color: #274F8B;
     border-radius: 1.5em;
     border-style: none;
     box-sizing: border-box;
+    box-shadow: 10px 5px 5px #e3e3e3;
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-size: 1em;
+    font-size: 1.3em;
     font-weight: 700;
     line-height: 1.5;
     margin: auto;
@@ -135,18 +171,49 @@ select{
   .button-save:focus {
     opacity: .75;
   }
-
-  label:hover, label:active, input:hover+label, input:active+label {
-    font-size: 1.25em;
+  .button-file {
+    background-color: #274F8B;
+    border-radius: 1.5em;
+    border-style: none;
+    box-sizing: border-box;
+    box-shadow: 10px 5px 5px #e3e3e3;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: 700;
+    line-height: 1.5;
     margin: auto;
-    margin-top: -2.8em;
-    border-bottom: solid;
-    border-color: #274F8B;
+    margin-top: -5em;
+    max-width: 8em;
+    min-height: 2.125em;
+    min-width: 0.625em;
+    outline: none;
+    overflow: hidden;
+    padding: 0.5em 1.25em 0.5em;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-file:hover,
+  .button-file:focus {
+    opacity: .75;
+  } 
+  .button-file .icon{
+    vertical-align: -10%;
+  }
+
+::ng-deep footer{
+    display: flex;
+    width: 100%;
+    height: 20em;
+    background-color: #e3e3e3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
   
-
-
- 
 /* Styles spécifiques pour les écrans plus petits */
 
 @media only screen and (max-width: 600px) {
@@ -181,11 +248,11 @@ select{
  
     .btn{
         display: flex;
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin: auto;  
     }
     label:hover, label:active, input:hover+label, input:active+label {
-        font-size: 1.25em;
+        font-size: 1.55em;
         margin: auto;
         border-bottom: solid;
         border-color: #274F8B;
@@ -235,12 +302,12 @@ select{
  
     .btn{
         display: flex;
-        font-size: 1.2em;
+        font-size: 1.5em;
         margin: auto;  
         margin-right: 13em;
     }
     label:hover, label:active, input:hover+label, input:active+label {
-        font-size: 1.25em;
+        font-size: 1.55em;
         margin: auto;
         margin-left: 5.5em;
         border-bottom: solid;
