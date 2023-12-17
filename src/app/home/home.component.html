@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="dontmove">
+        <nav class="navbar">
+            <div class="logo-container">
+                <img class="logo1" src="../../assets/images/logo2.png">
+                <img class="logo2" src="../../assets/images/logo.png">
+            </div>
+
+            <div>
+                <a class="search" href="#section-id">
+                    <span class="link">Anywhere</span>
+                    <span class="link">Any week</span>
+                    <span class="link">Add guest</span>
+                    <div class="icon-container">
+                        <img class="logo4" src="../../assets/images/loupe.png">
+                    </div>
+                </a>
+            </div>
+
+            <div class="right-bar">
+                <div class="user-profile">
+                    <a class="link" href="#section-id">SeaBnB your home</a>
+                </div>
+
+                <div class="user-profile_menu" (click)="openModal()">
+                    <a class="sectionId">
+                        <ng-icon class="logo3" name="heroBars3"></ng-icon>
+                        <ng-icon class="logo5" name="heroUserCircle"></ng-icon>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="horizontal_line">
+        </div>
+    </div>
+    <div class="modal" id="modal" *ngIf="showModal">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <p>Contenu de votre modale...</p>
+        </div>
+    </div>
+    <div class="centerbody">
+        <div class="colorfilter">
+            <div class="filter-container">
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+                <div class="filter-item">Filter 1</div>
+                <div class="filter-item">Filter 2</div>
+                <div class="filter-item">Filter 3</div>
+            </div>
+        </div>
+        <div class="image-grid">
+            <a class="link2" href="#">
+                <div class="image-item">
+                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
+                    <div class="designText">
+                        <div class="image-caption">
+                            <h4>La souche, France</h4>
+                            <p>13 janv - 3 fev</p>
+                            <p><span class="money">100 €</span> par jour</p>
+                        </div>
+                        <div class="centerstars">
+                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="link2" href="#">
+                <div class="image-item">
+                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
+                    <div class="designText">
+                        <div class="image-caption">
+                            <h4>La souche, France</h4>
+                            <p>13 janv - 3 fev</p>
+                            <p><span class="money">100 €</span> par jour</p>
+                        </div>
+                        <div class="centerstars">
+                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a class="link2" href="#">
+                <div class="image-item">
+                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
+                    <div class="designText">
+                        <div class="image-caption">
+                            <h4>La souche, France</h4>
+                            <p>13 janv - 3 fev</p>
+                            <p><span class="money">100 €</span> par jour</p>
+                        </div>
+                        <div class="centerstars">
+                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
