@@ -23,6 +23,9 @@ import { OwnerComponent } from './owner/owner.component';
     ProfilComponent,
     LoginComponent,
     RegisterComponent,
+    BoatsComponent,
+    DescriptionComponent,
+    OwnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,12 +34,9 @@ import { OwnerComponent } from './owner/owner.component';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    BoatsComponent,
-    DescriptionComponent,
-    OwnerComponent,
     NgIconsModule.withIcons({ heroUser, heroEnvelope, heroLockClosed, heroBars3, heroUserCircle, heroStarSolid, heroLanguage, heroCamera, heroChevronRight }),
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
