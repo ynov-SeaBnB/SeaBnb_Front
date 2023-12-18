@@ -9,6 +9,29 @@ body {
   margin: 0;
 }
 
+.logo {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 50%;
+  height: auto;
+  max-width: 100px;
+}
+
+.line {
+  position: static;
+  width: 100%;
+  height: 82%;
+  color: #EFEFEF;
+}
+
+.horizontal_line {
+
+  border: 1px solid red;
+  margin: 20px 0; /* Adjust the margin to control the space around the line */
+
+}
+
 a {
   color: slategrey;
   margin-top: 1rem; /* Adds some top margin for spacing */
