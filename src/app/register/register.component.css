@@ -9,6 +9,14 @@ body {
   margin: 0;
 }
 
+a {
+  color: slategrey;
+  margin-top: 1rem; /* Adds some top margin for spacing */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
 .errorOnForm {
   color: #ff291e;
   font-size: 0.8rem;
