@@ -8,6 +8,12 @@ nav{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
+.back{
+    display: flex;
+    font-size: 1.6em;
+    margin: 1em;
+    cursor: pointer;
+}
 
 .logo{
     display: flex;
@@ -25,7 +31,7 @@ nav input[type=button]{
     cursor: pointer;
     touch-action: manipulation;
     margin: auto;
-    margin-left: -5em;
+    margin-left: 0em;
     background-color: #fff;
 }
 nav input[type=button]:hover{
