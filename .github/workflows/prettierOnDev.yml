@@ -1,9 +1,8 @@
 name: Continuous Integration
 
-# This action works with pull requests, pushes, and merged events
+# This action works with pull requests and pushes
 on:
   pull_request:
-    types: [closed] # This triggers the workflow when a pull request is closed
   push:
     branches:
       - dev
@@ -12,8 +11,7 @@ on:
 jobs:
   prettier:
     runs-on: ubuntu-latest
-    # Add an if condition to check if the pull request was merged
-    if: ${{ github.event.pull_request.merged == true || github.event_name == 'push' }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
