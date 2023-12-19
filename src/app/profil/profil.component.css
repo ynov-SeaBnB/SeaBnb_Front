@@ -10,9 +10,15 @@ nav{
 }
 .back{
     display: flex;
+    width: 1em;
+    height: 1em;
+    border-radius: 1.5em;
     font-size: 1.6em;
     margin: 1em;
     cursor: pointer;
+}
+.back:hover{
+    background-color: #f4f4f4;
 }
 
 .logo{
