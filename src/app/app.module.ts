@@ -16,6 +16,7 @@ import { BoatsComponent } from './boats/boats.component';
 import { DescriptionComponent } from './description/description.component';
 import { OwnerComponent } from './owner/owner.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     DescriptionComponent,
     OwnerComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
