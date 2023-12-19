@@ -10,7 +10,7 @@ import { DescriptionComponent } from './description/description.component';
 export const routes: Routes = [
   {path: '', redirectTo:'home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'profil', component: ProfilComponent},
+  {path: 'profile', component: ProfilComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   {path: 'owner', component: OwnerComponent},
