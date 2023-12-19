@@ -8,17 +8,17 @@ import { OwnerComponent } from './owner/owner.component';
 import { DescriptionComponent } from './description/description.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo:'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'profile', component: ProfilComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'profile', component: ProfilComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {path: 'owner', component: OwnerComponent},
-  {path: 'description', component: DescriptionComponent},
+  { path: 'owner', component: OwnerComponent },
+  { path: 'description', component: DescriptionComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
