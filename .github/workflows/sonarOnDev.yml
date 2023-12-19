@@ -6,7 +6,7 @@ on:
       - dev
   pull_request:
       types: [opened, synchronize, reopened]
-name: Dev Workflow
+name: Sonar Workflow on Dev
 jobs:
   sonarcloud:
     runs-on: ubuntu-latest
