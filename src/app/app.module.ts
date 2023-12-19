@@ -15,6 +15,7 @@ import { heroStarSolid } from '@ng-icons/heroicons/solid';
 import { BoatsComponent } from './boats/boats.component';
 import { DescriptionComponent } from './description/description.component';
 import { OwnerComponent } from './owner/owner.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { OwnerComponent } from './owner/owner.component';
     BoatsComponent,
     DescriptionComponent,
     OwnerComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
