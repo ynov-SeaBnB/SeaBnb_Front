@@ -8,6 +8,12 @@ nav{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
+.back{
+    display: flex;
+    font-size: 1.6em;
+    margin: 1em;
+    cursor: pointer;
+}
 
 .logo{
     display: flex;
@@ -25,7 +31,7 @@ nav input[type=button]{
     cursor: pointer;
     touch-action: manipulation;
     margin: auto;
-    margin-left: -5em;
+    margin-left: 17em;
     background-color: #fff;
 }
 nav input[type=button]:hover{
@@ -58,6 +64,7 @@ img{
     height: 12em;
     border-radius: 50%;
     margin: auto;
+    margin-top: 2em;
 }
 
 .form{
@@ -150,7 +157,7 @@ select{
     color: #fff;
     cursor: pointer;
     display: flex;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 700;
     line-height: 1.5;
     margin: auto;
@@ -172,6 +179,7 @@ select{
     opacity: .75;
   }
   .button-file {
+ 
     background-color: #274F8B;
     border-radius: 1.5em;
     border-style: none;
@@ -183,7 +191,7 @@ select{
     font-weight: 700;
     line-height: 1.5;
     margin: auto;
-    margin-top: -5em;
+    margin-left: 6em;
     max-width: 8em;
     min-height: 2.125em;
     min-width: 0.625em;
