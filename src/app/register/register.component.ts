@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {
   AbstractControl,
   FormBuilder,
@@ -6,6 +7,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-register',
@@ -34,12 +36,27 @@ export class RegisterComponent {
     },
   );
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private http: HttpClient,
+  ) {}
 
   onSubmit() {
     if (this.signUpForm.valid) {
-      //a faire
+      const formData = this.signUpForm.value;
+
+      this.http.post('http://localhost:3307/api/register', formData).subscribe(
+        (response: any) => {
+          console.log('Registration successful !!!', response);
+          // Handle success as needed (e.g., redirect, show a success message)
+        },
+        (error: any) => {
+          console.error('Error registering user sussy baka', error);
+          // Handle error (e.g., display an error message to the user)
+        },
+      );
     } else {
+      // Handle form validation errors
     }
   }
 

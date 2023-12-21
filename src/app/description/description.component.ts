@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-description',
   templateUrl: './description.component.html',
-  styleUrls: ['./description.component.css']
+  styleUrls: ['./description.component.css'],
 })
 export class DescriptionComponent {
   minDate: string;
@@ -38,3 +38,4 @@ export class DescriptionComponent {
     console.log(f.value);
   }
 }
+export class DescriptionComponent {}
