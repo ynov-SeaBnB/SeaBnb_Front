@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   heroBars3,
   heroUserCircle,
+  heroTrash,
   heroUser,
   heroLockClosed,
   heroEnvelope,
@@ -25,6 +26,7 @@ import { heroStarSolid } from '@ng-icons/heroicons/solid';
 import { BoatsComponent } from './boats/boats.component';
 import { DescriptionComponent } from './description/description.component';
 import { OwnerComponent } from './owner/owner.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -44,8 +46,10 @@ import { OwnerComponent } from './owner/owner.component';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     NgIconsModule.withIcons({
       heroUser,
+      heroTrash,
       heroEnvelope,
       heroLockClosed,
       heroBars3,
