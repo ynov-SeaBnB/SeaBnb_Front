@@ -46,6 +46,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+
     FormsModule,
     NgIconsModule.withIcons({
       heroUser,

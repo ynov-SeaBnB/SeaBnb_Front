@@ -36,12 +36,14 @@
         <div class="horizontal_line">
         </div>
     </div>
-    <div class="modal" id="modal" *ngIf="showModal">
-        <div class="modal-content">
-            <span class="close" (click)="closeModal()">&times;</span>
-            <button class="BtnMenu" routerLink="/login">Log In</button>
-            <button class="BtnMenu" routerLink="/register">Register</button>
-            <button class="BtnMenu" routerLink="/profile">Your profile</button>
+    <div class="overlay" (click)="closeModal()" *ngIf="showModal">
+        <div class="modal" *ngIf="showModal">
+            <div class="modal-content">
+                <span class="close" (click)="closeModal()">&times;</span>
+                <button class="BtnMenu" routerLink="/login">Log In</button>
+                <button class="BtnMenu" routerLink="/register">Register</button>
+                <button class="BtnMenu" routerLink="/profil">Your profile</button>
+            </div>
         </div>
     </div>
     <div class="centerbody">
