@@ -17,6 +17,8 @@ import { DescriptionComponent } from './description/description.component';
 import { OwnerComponent } from './owner/owner.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
     ReactiveFormsModule,
     HttpClientModule,
