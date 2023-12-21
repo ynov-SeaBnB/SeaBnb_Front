@@ -1,35 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Sign Up</title>
 </head>
 <body>
+
+<a class="logo-container" href="/home">
+  <img alt="logo" class="logo" src="../../assets/images/logo.png">
+</a>
+
 <div class="signup-card">
   <h2 class="signup-card-title">Sign up to SeaBnB</h2>
   <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
-    <input formControlName="firstName" placeholder="First Name" required type="text">
-    <input formControlName="lastName" placeholder="Last Name" required type="text">
-    <input formControlName="email" placeholder="Email Address" required type="email">
-    <div *ngIf="signUpForm.get('password')?.errors?.['passwordComplexity']" class="errorOnForm">
-      Password must be at least 8 characters long and contain a number and capital letter.
+    <input
+      formControlName="firstName"
+      placeholder="First Name"
+      required
+      type="text"
+    />
+    <input
+      formControlName="lastName"
+      placeholder="Last Name"
+      required
+      type="text"
+    />
+    <input
+      formControlName="email"
+      placeholder="Email Address"
+      required
+      type="email"
+    />
+    <div
+      *ngIf="signUpForm.get('password')?.errors?.['passwordComplexity']"
+      class="errorOnForm"
+    >
+      Password must be at least 8 characters long and contain a number and
+      capital letter.
     </div>
-    <input formControlName="password" placeholder="Password" required type="password">
+    <input
+      formControlName="password"
+      placeholder="Password"
+      required
+      type="password"
+    />
     <div *ngIf="signUpForm.errors?.['passwordMatch']" class="errorOnForm">
       Passwords do not match.
     </div>
-    <input formControlName="confirmPassword" placeholder="Confirm password" required type="password">
-    <div *ngIf="signUpForm.get('birthDate')?.errors?.['underage']" class="errorOnForm">
+    <input
+      formControlName="confirmPassword"
+      placeholder="Confirm password"
+      required
+      type="password"
+    />
+    <div
+      *ngIf="signUpForm.get('birthDate')?.errors?.['underage']"
+      class="errorOnForm"
+    >
       You must be at least 18 years old.
     </div>
-    <input formControlName="birthDate" required type="date">
+    <input formControlName="birthDate" required type="date"/>
     <button [disabled]="!signUpForm.valid" type="submit">Sign Up</button>
+    <a href="/login"> Already have an account ?</a>
   </form>
 </div>
-
 </body>
 </html>
-
-
-

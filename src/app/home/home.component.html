@@ -36,10 +36,14 @@
         <div class="horizontal_line">
         </div>
     </div>
-    <div class="modal" id="modal" *ngIf="showModal">
-        <div class="modal-content">
-            <span class="close" (click)="closeModal()">&times;</span>
-            <p>Contenu de votre modale...</p>
+    <div class="overlay" (click)="closeModal()" *ngIf="showModal">
+        <div class="modal" *ngIf="showModal">
+            <div class="modal-content">
+                <span class="close" (click)="closeModal()">&times;</span>
+                <button class="BtnMenu" routerLink="/login">Log In</button>
+                <button class="BtnMenu" routerLink="/register">Register</button>
+                <button class="BtnMenu" routerLink="/profil">Your profile</button>
+            </div>
         </div>
     </div>
     <div class="centerbody">
@@ -81,7 +85,7 @@
             </div>
         </div>
         <div class="image-grid">
-            <a class="link2" href="#">
+            <a class="link2" href="#" routerLink="/description">
                 <div class="image-item">
                     <img src="../../assets/images/Bateau.jpg" alt="Image 1">
                     <div class="designText">
@@ -97,7 +101,7 @@
                     </div>
                 </div>
             </a>
-            <a class="link2" href="#">
+            <a class="link2" href="#" routerLink="/description">
                 <div class="image-item">
                     <img src="../../assets/images/Bateau.jpg" alt="Image 1">
                     <div class="designText">
@@ -113,7 +117,7 @@
                     </div>
                 </div>
             </a>
-            <a class="link2" href="#">
+            <a class="link2" href="#" routerLink="/description">
                 <div class="image-item">
                     <img src="../../assets/images/Bateau.jpg" alt="Image 1">
                     <div class="designText">
