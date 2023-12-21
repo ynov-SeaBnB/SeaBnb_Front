@@ -9,14 +9,14 @@ import { DescriptionComponent } from './description/description.component';
 import { BoatsComponent } from './boats/boats.component';
 
 export const routes: Routes = [
-  {path: '', redirectTo:'home', pathMatch: 'full'},
-  {path: 'home', component: HomeComponent},
-  {path: 'profile', component: ProfilComponent},
-  {path: 'login', component: LoginComponent },
-  {path: 'register', component: RegisterComponent },
-  {path: 'owner', component: OwnerComponent},
-  {path: 'description', component: DescriptionComponent},
-  {path: 'boats', component: BoatsComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'profile', component: ProfilComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'owner', component: OwnerComponent },
+  { path: 'description', component: DescriptionComponent },
+  { path: 'boats', component: BoatsComponent },
 ];
 
 @NgModule({
