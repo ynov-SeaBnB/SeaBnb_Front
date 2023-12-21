@@ -17,11 +17,10 @@ export const routes: Routes = [
   {path: 'owner', component: OwnerComponent},
   {path: 'description', component: DescriptionComponent},
   {path: 'boats', component: BoatsComponent},
-
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -9,7 +9,7 @@ interface Boat {
 @Component({
   selector: 'app-boats',
   templateUrl: './boats.component.html',
-  styleUrls: ['./boats.component.css']
+  styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
   boats: Boat[] = [
@@ -97,4 +97,3 @@ export class BoatsComponent {
     }
   }
 }
-
