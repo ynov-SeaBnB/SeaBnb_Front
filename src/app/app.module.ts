@@ -26,6 +26,9 @@ import { heroStarSolid } from '@ng-icons/heroicons/solid';
 import { BoatsComponent } from './boats/boats.component';
 import { DescriptionComponent } from './description/description.component';
 import { OwnerComponent } from './owner/owner.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { FormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -38,9 +41,12 @@ import { FormsModule } from '@angular/forms';
     BoatsComponent,
     DescriptionComponent,
     OwnerComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
     ReactiveFormsModule,
     HttpClientModule,
