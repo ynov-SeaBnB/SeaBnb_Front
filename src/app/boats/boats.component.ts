@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 
-
 interface Boat {
   name: string;
   isActive: boolean;
@@ -9,23 +8,54 @@ interface Boat {
 @Component({
   selector: 'app-boats',
   templateUrl: './boats.component.html',
-  styleUrls: ['./boats.component.css']
+  styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
   boats: Boat[] = [
-    { name: 'Engine', isActive: false, imagePath: '../../assets/images/icons/engine.png' },
-    { name: 'Sailing ship', isActive: false, imagePath: '../../assets/images/icons/sailing.png' },
-    { name: 'Semi-rigid', isActive: false, imagePath: '../../assets/images/icons/semi-rigid.png' },
-    { name: 'Catamaran', isActive: false, imagePath: '../../assets/images/icons/catamaran.png' },
-    { name: 'Barge', isActive: false, imagePath: '../../assets/images/icons/barge.png' },
-    { name: 'Schooner', isActive: false, imagePath: '../../assets/images/icons/schooner.png' },
-    { name: 'Boat without license', isActive: false, imagePath: '../../assets/images/icons/boatwithoutlicense.png' },
-    { name: 'Yacht', isActive: false, imagePath: '../../assets/images/icons/yacht.png' }
-    
+    {
+      name: 'Engine',
+      isActive: false,
+      imagePath: '../../assets/images/icons/engine.png',
+    },
+    {
+      name: 'Sailing ship',
+      isActive: false,
+      imagePath: '../../assets/images/icons/sailing.png',
+    },
+    {
+      name: 'Semi-rigid',
+      isActive: false,
+      imagePath: '../../assets/images/icons/semi-rigid.png',
+    },
+    {
+      name: 'Catamaran',
+      isActive: false,
+      imagePath: '../../assets/images/icons/catamaran.png',
+    },
+    {
+      name: 'Barge',
+      isActive: false,
+      imagePath: '../../assets/images/icons/barge.png',
+    },
+    {
+      name: 'Schooner',
+      isActive: false,
+      imagePath: '../../assets/images/icons/schooner.png',
+    },
+    {
+      name: 'Boat without license',
+      isActive: false,
+      imagePath: '../../assets/images/icons/boatwithoutlicense.png',
+    },
+    {
+      name: 'Yacht',
+      isActive: false,
+      imagePath: '../../assets/images/icons/yacht.png',
+    },
   ];
 
   toggleBackgroundColor(clickedBoat: Boat) {
-    this.boats.forEach(boat => {
+    this.boats.forEach((boat) => {
       if (boat !== clickedBoat) {
         boat.isActive = false;
       }
@@ -36,7 +66,7 @@ export class BoatsComponent {
   selectedOption: string = 'option2';
   inputText: string = '';
 
-  images: string[] = []; // 
+  images: string[] = []; //
 
   onDragOver(event: Event): void {
     event.preventDefault();
@@ -87,7 +117,7 @@ export class BoatsComponent {
       const ctx = canvas.getContext('2d');
       if (ctx) {
         ctx.drawImage(img, 0, 0, width, height);
-        this.images.push(canvas.toDataURL('image/jpeg')); 
+        this.images.push(canvas.toDataURL('image/jpeg'));
       }
     };
   }
@@ -97,4 +127,3 @@ export class BoatsComponent {
     }
   }
 }
-
