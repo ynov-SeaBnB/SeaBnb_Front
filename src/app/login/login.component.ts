@@ -12,20 +12,20 @@ interface ValidationError {
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder,
-    private apiService: ApiService,
+    private apiService: ApiService
   ) {}
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     console.log(this.loginForm.value);
     this.apiService.login(this.loginForm.value).subscribe(
       (success: any) => console.log('User logged in', success),
-      (error: any) => console.error('Login failed', error),
+      (error: any) => console.error('Login failed', error)
     );
   }
 
