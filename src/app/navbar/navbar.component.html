@@ -1,0 +1,44 @@
+<div class="dontmove">
+    <nav class="navbar">
+        <div class="logo-container">
+            <img class="logo1" src="../../assets/images/logo2.png">
+            <img class="logo2" src="../../assets/images/logo.png">
+        </div>
+
+        <div>
+            <a class="search" href="#section-id">
+                <span class="link">Anywhere</span>
+                <span class="link">Any week</span>
+                <span class="link">Add guest</span>
+                <div class="icon-container">
+                    <img class="logo4" src="../../assets/images/loupe.png">
+                </div>
+            </a>
+        </div>
+
+        <div class="right-bar">
+            <div class="user-profile">
+                <a class="link" href="#section-id">SeaBnB your home</a>
+            </div>
+
+            <div class="user-profile_menu" (click)="openModal()">
+                <a class="sectionId">
+                    <ng-icon class="logo3" name="heroBars3"></ng-icon>
+                    <ng-icon class="logo5" name="heroUserCircle"></ng-icon>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="horizontal_line">
+    </div>
+</div>
+<div class="overlay" (click)="closeModal()" *ngIf="showModal">
+    <div class="modal" *ngIf="showModal">
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <button class="BtnMenu" routerLink="/login">Log In</button>
+            <button class="BtnMenu" routerLink="/register">Register</button>
+            <button class="BtnMenu" routerLink="/profil">Your profile</button>
+        </div>
+    </div>
+</div>
