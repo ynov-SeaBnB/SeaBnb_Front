@@ -1,59 +1,31 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Log in</title>
-</head>
-<body>
-
-
-<a href="/home">
-  <img alt="logo" class="logo" src="../../assets/images/logo.png"/>
-</a>
-
-<!-- Copilot add a line -->
-
-<div class="login-card">
-  <h2 class="login-card-title">Log in to SeaBnB</h2>
-  <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <!-- Email input and error messages -->
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
     <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
-      <div *ngIf="getControlErrors('email')?.required" class="errorOnForm">
+      <div *ngIf="getControlErrors('email')?.required">
         Email is required.
       </div>
-      <div *ngIf="getControlErrors('email')?.email" class="errorOnForm">
+      <div *ngIf="getControlErrors('email')?.email">
         Email must be a valid email address.
       </div>
     </div>
-    <input
-      formControlName="email"
-      id="email"
-      placeholder="Email"
-      required
-      type="email"
-    />
+  </div>
 
-    <!-- Password input and error messages -->
-    <div
-      *ngIf="password?.invalid && (password?.dirty || password?.touched)"
-    >
-      <div
-        *ngIf="getControlErrors('password')?.required"
-        class="errorOnForm"
-      >
+  <!-- Password input and error messages -->
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <div *ngIf="password?.invalid && (password?.dirty || password?.touched)">
+      <div *ngIf="getControlErrors('password')?.required">
         Password is required.
       </div>
+      <div *ngIf="getControlErrors('password')?.minlength">
+        Password must be at least {{ getControlErrors('password')?.minlength?.["requiredLength"] }} characters long.
+      </div>
     </div>
-    <input
-      formControlName="password"
-      id="password"
-      placeholder="Password"
-      type="password"
-    />
+  </div>
 
-    <button [disabled]="!loginForm.valid" type="submit">Login</button>
-    <a href="/register">Sign up</a>
-  </form>
-</div>
-</body>
-</html>
+  <button type="submit" [disabled]="!loginForm.valid">Login</button>
+</form>

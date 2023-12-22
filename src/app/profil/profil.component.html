@@ -7,19 +7,15 @@
 </head>
 <body class="body">
     <nav>
-        <a href="/home">
-            <img alt="logo" class="logo" src="../../assets/Seabnb.png"/>
-        </a>
-        <input type="button" value="Your Profile" routerLink="/profile">
-        <ng-icon name="heroArrowUturnLeft" class="back" routerLink="/home"></ng-icon>
+        <img src="../../assets/Seabnb.png" class="logo"/>
+        <input type="button" value="Your Profile">
+        <input type="button" value="Switch to travelling">
     </nav>
     <div class="grid">
         <div class="grid1">
-            <div>
-                <img [src]="url ? url : 'https://sandcliffsales.com/static/assets/img/team/default-profile.png'"> <br/>
-                <label for="files" class="button-file"><ng-icon name="heroCamera" class="icon"></ng-icon>Edit</label>
-                <input type='file' style="visibility:hidden;" id="files"  (change)="onSelectFile($event)">
-            </div>
+            <img [src]="url ? url : 'https://sandcliffsales.com/static/assets/img/team/default-profile.png'"> <br/>
+            <label for="files" class="button-file"><ng-icon name="heroCamera" class="icon"></ng-icon>Edit</label>
+            <input type='file' style="visibility:hidden;" id="files"  (change)="onSelectFile($event)">
         </div>
         <div class="grid2">
             <form *ngIf="showForm" class="form">
