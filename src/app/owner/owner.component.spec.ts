@@ -8,7 +8,7 @@ describe('OwnerComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [OwnerComponent]
+      declarations: [OwnerComponent],
     });
     fixture = TestBed.createComponent(OwnerComponent);
     component = fixture.componentInstance;
