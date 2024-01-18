@@ -10,7 +10,6 @@ interface Boat {
   templateUrl: './boats.component.html',
   styleUrls: ['./boats.component.css'],
 })
-
 export class BoatsComponent {
   boats: Boat[] = [
     {

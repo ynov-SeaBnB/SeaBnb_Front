@@ -6,7 +6,6 @@ import { NgForm } from '@angular/forms';
   templateUrl: './description.component.html',
   styleUrls: ['./description.component.css'],
 })
-
 export class DescriptionComponent {
   minDate: string;
   selectedDate: string;
