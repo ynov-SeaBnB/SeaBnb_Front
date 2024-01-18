@@ -17,7 +17,7 @@ export class NavbarComponent {
   }
   isHomePage: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 
   ngOnInit() {
     // Obtenez l'URL actuelle
