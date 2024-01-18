@@ -32,8 +32,7 @@ interface BoatFormData {
   styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
-
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {}
 
   boatFormData: BoatFormData = {
     name: '',
@@ -173,9 +172,15 @@ export class BoatsComponent {
   onSubmit() {
     const formData: BoatFormData = {
       name: (document.getElementById('boatName') as HTMLInputElement).value,
-      width: parseFloat((document.getElementById('boatWidth') as HTMLInputElement).value),
-      length: parseFloat((document.getElementById('boatLength') as HTMLInputElement).value),
-      motorized: [(document.getElementById('motorized') as HTMLSelectElement).value],
+      width: parseFloat(
+        (document.getElementById('boatWidth') as HTMLInputElement).value,
+      ),
+      length: parseFloat(
+        (document.getElementById('boatLength') as HTMLInputElement).value,
+      ),
+      motorized: [
+        (document.getElementById('motorized') as HTMLSelectElement).value,
+      ],
       port: [(document.getElementById('port') as HTMLInputElement).value],
       country: (document.getElementById('country') as HTMLInputElement).value,
       type: (document.getElementById('type') as HTMLInputElement).value,
@@ -185,7 +190,9 @@ export class BoatsComponent {
       specifications: {}, // Vous devrez ajouter la logique pour récupérer les spécifications à partir du formulaire
       availability: {}, // Vous devrez ajouter la logique pour récupérer la disponibilité à partir du formulaire
       deposit: (document.getElementById('deposit') as HTMLInputElement).value,
-      note: parseFloat((document.getElementById('note') as HTMLInputElement).value),
+      note: parseFloat(
+        (document.getElementById('note') as HTMLInputElement).value,
+      ),
       propertyPapers: [], // Vous devrez ajouter la logique pour récupérer les papiers à partir du formulaire
       idOwner: 0, // Vous devrez ajouter la logique pour récupérer l'ID du propriétaire à partir du formulaire
     };
@@ -198,7 +205,7 @@ export class BoatsComponent {
       },
       (error) => {
         console.error('Error creating boat:', error);
-      }
+      },
     );
   }
 
