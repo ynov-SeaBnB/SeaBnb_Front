@@ -6,13 +6,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  private API_URL = 'http://yourbackend.com/api';
+  private API_URL = 'http://localhost:3000';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   login(credentials: { email: string; password: string }): Observable<any> {
     return this.http.post(`${this.API_URL}/login`, credentials);
   }
 
-  // other API calls...
+  getBoatsDetails(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.API_URL}/boats`);
+  }
+
+  // Ajoutez d'autres appels d'API au besoin...
 }
