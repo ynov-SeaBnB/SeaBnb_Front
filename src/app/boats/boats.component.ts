@@ -184,6 +184,7 @@ export class BoatsComponent {
   }
   deleteDocument(index: number) {
     this.documents.splice(index, 1);
+  }
 
   onSubmit() {
     const formData: BoatFormData = {
