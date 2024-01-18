@@ -30,6 +30,8 @@ import { OwnerComponent } from './owner/owner.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { ReservationsComponent } from './reservations/reservations.component';
+import { PropertiesComponent } from './properties/properties.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,8 @@ import { FormsModule } from '@angular/forms';
     OwnerComponent,
     NavbarComponent,
     FooterComponent,
+    ReservationsComponent,
+    PropertiesComponent,
   ],
   imports: [
     BrowserModule,
