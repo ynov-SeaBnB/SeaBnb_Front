@@ -13,7 +13,7 @@ nav{
     width: 1em;
     height: 1em;
     border-radius: 1.5em;
-    font-size: 1.6em;
+    font-size: 1.5em;
     margin: 1em;
     cursor: pointer;
 }
@@ -33,7 +33,7 @@ nav input[type=button]{
 	border: none;
 	outline: none;
 	border-radius: .2em .2em 0 0;
-    font-size: 1.8em;
+    font-size: 1.2em;
     cursor: pointer;
     touch-action: manipulation;
     margin: auto;
@@ -75,7 +75,7 @@ img{
 
 .form{
     margin: 1em;
-    font-size: 1.3em;
+    font-size: 1.2em;
 }
 .row{
     display: flex;
@@ -104,7 +104,7 @@ img{
 	background: rgba(#274F8B, .2);
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
-    font-size: 1.125em;
+    font-size: 1em;
     box-shadow: 10px 5px 5px #e3e3e3;
 }
 *:disabled{
@@ -118,7 +118,7 @@ input[type=email]{
 	background: rgba(#274F8B, .2);
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
-    font-size: 1.125em;
+    font-size: 1em;
     box-shadow: 10px 5px 5px #e3e3e3;
 }
 input[type=password]{
@@ -129,7 +129,7 @@ input[type=password]{
 	background: rgba(#274F8B, .2);
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
-    font-size: 1.125em;
+    font-size: 1em;
     box-shadow: 10px 5px 5px #e3e3e3;
 }
 input[type=date]{
@@ -140,7 +140,7 @@ input[type=date]{
 	background: rgba(#274F8B, .2);
 	border-radius: .2em .2em 0 0;
 	padding: .4em;
-    font-size: 1.125em;
+    font-size: 1em;
     box-shadow: 10px 5px 5px #e3e3e3;
 }
 select{
@@ -151,7 +151,7 @@ select{
     background: rgba(#274F8B, .2);
     border-radius: .2em .2em 0 0;
     padding: .4em;
-    font-size: 1.125em;
+    font-size: 1em;
     box-shadow: 10px 5px 5px #e3e3e3;
 }
 .button-save {
@@ -185,7 +185,7 @@ select{
     opacity: .75;
   }
   .button-file {
- 
+    display: flex;
     background-color: #274F8B;
     border-radius: 1.5em;
     border-style: none;
@@ -193,17 +193,16 @@ select{
     box-shadow: 10px 5px 5px #e3e3e3;
     color: #fff;
     cursor: pointer;
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 700;
     line-height: 1.5;
     margin: auto;
-    margin-left: 6em;
     max-width: 8em;
     min-height: 2.125em;
     min-width: 0.625em;
     outline: none;
     overflow: hidden;
-    padding: 0.5em 1.25em 0.5em;
+    padding: 0.5em 1.25em 0.5em 2em;
     text-align: center;
     text-transform: none;
     user-select: none;
@@ -262,11 +261,11 @@ select{
  
     .btn{
         display: flex;
-        font-size: 1.5em;
+        font-size: 1em;
         margin: auto;  
     }
     label:hover, label:active, input:hover+label, input:active+label {
-        font-size: 1.55em;
+        font-size: 1.1em;
         margin: auto;
         border-bottom: solid;
         border-color: #274F8B;
@@ -316,12 +315,12 @@ select{
  
     .btn{
         display: flex;
-        font-size: 1.5em;
+        font-size: 1em;
         margin: auto;  
         margin-right: 13em;
     }
     label:hover, label:active, input:hover+label, input:active+label {
-        font-size: 1.55em;
+        font-size: 1.1em;
         margin: auto;
         margin-left: 5.5em;
         border-bottom: solid;
