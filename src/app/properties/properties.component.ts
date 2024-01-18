@@ -3,8 +3,6 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-properties',
   templateUrl: './properties.component.html',
-  styleUrls: ['./properties.component.css']
+  styleUrls: ['./properties.component.css'],
 })
-export class PropertiesComponent {
-
-}
+export class PropertiesComponent {}
