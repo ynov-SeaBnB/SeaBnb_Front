@@ -20,7 +20,6 @@ export class NavbarComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    // Obtenez l'URL actuelle
     const currentUrl = this.router.url;
 
     // Vérifiez si c'est la page d'accueil

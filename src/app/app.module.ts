@@ -21,6 +21,7 @@ import {
   heroChevronRight,
   heroArrowUturnLeft,
   heroTrash,
+  heroDocumentPlus,
 } from '@ng-icons/heroicons/outline';
 import { heroStarSolid } from '@ng-icons/heroicons/solid';
 import { BoatsComponent } from './boats/boats.component';
@@ -63,6 +64,7 @@ import { FormsModule } from '@angular/forms';
       heroChevronRight,
       heroArrowUturnLeft,
       heroTrash,
+      heroDocumentPlus
     }),
   ],
   providers: [],
