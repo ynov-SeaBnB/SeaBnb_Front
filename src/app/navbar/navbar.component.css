@@ -15,6 +15,7 @@
 
 .logo-container {
     display: flex;
+    cursor: pointer;
 }
 
 .logo1 {

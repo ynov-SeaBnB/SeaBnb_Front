@@ -17,5 +17,9 @@ export class ApiService {
     return this.http.post(`${this.API_URL}/users/login`, credentials);
   }
 
-  // other API calls...
+  getBoatsDetails(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.API_URL}/boats`);
+  }
+
+  // Ajoutez d'autres appels d'API au besoin...
 }

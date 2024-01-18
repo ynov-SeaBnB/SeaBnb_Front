@@ -244,6 +244,23 @@
 
 </body>
 
+<div class="image-grid">
+    <a *ngFor="let boat of boatsDetails" class="link2" href="#" routerLink="/description">
+        <div class="image-item">
+            <img [src]="boat.pictures?.[0]?.url" alt="{{ boat.name }}">
+            <div class="designText">
+                <div class="image-caption">
+                    <h4>{{ boat.name }}, {{ boat.country }}</h4>
+                    <p>{{ boat.length }} m - {{ boat.width }} m</p>
+                    <p><span class="money">{{ boat.deposit }}</span> - Note: {{ boat.note }}</p>
+                </div>
+                <div class="centerstars">
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
 <app-footer></app-footer>
 
 </html>
