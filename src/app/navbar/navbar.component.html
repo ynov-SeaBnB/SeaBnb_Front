@@ -1,12 +1,12 @@
 <div class="dontmove">
     <nav class="navbar">
-        <div class="logo-container">
+        <div class="logo-container" routerLink="/home">
             <img class="logo1" src="../../assets/images/logo2.png">
             <img class="logo2" src="../../assets/images/logo.png">
         </div>
 
-        <div>
-            <a class="search" href="#">
+        <div *ngIf="isHomePage">
+            <a class="search" href="#section-id">
                 <span class="link">Anywhere</span>
                 <span class="link">Any week</span>
                 <span class="link">Add guest</span>
@@ -38,7 +38,9 @@
             <span class="close" (click)="closeModal()">&times;</span>
             <button class="BtnMenu" routerLink="/login">Log In</button>
             <button class="BtnMenu" routerLink="/register">Register</button>
-            <button class="BtnMenu" routerLink="/profil">Your profile</button>
+            <button class="BtnMenu" routerLink="/profile">Your profile</button>
+            <button class="BtnMenu" routerLink="/boats">Add boat</button>
+
         </div>
     </div>
 </div>

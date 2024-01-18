@@ -38,7 +38,7 @@ export class RegisterComponent {
 
   onSubmit() {
     if (this.signUpForm.valid) {
-      //a faire
+      console.log('Form submitted');
     } else {
     }
   }

@@ -4,7 +4,7 @@ import { ApiService } from '../api.service';
 
 interface ValidationError {
   required?: boolean;
-  email?: boolean;
+  emailAddress?: boolean;
   minlength?: { requiredLength: number; actualLength: number };
   // Add other validation properties as needed
 }
@@ -22,9 +22,18 @@ export class LoginComponent implements OnInit {
     private apiService: ApiService,
   ) {}
 
+  // Specific getters for each form control
+  get emailAddress() {
+    return this.loginForm.get('emailAddress');
+  }
+
+  get password() {
+    return this.loginForm.get('password');
+  }
+
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      emailAddress: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
     });
   }
@@ -41,14 +50,5 @@ export class LoginComponent implements OnInit {
   getControlErrors(controlName: string): ValidationError | null {
     const control = this.loginForm.get(controlName);
     return control?.errors as ValidationError | null;
-  }
-
-  // Specific getters for each form control
-  get email() {
-    return this.loginForm.get('email');
-  }
-
-  get password() {
-    return this.loginForm.get('password');
   }
 }
