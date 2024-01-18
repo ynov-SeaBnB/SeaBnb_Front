@@ -1,1 +1,93 @@
-<p>boats works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+</head>
+<body>
+    <div class="title">
+        <table>
+            <tr class="L1">
+                <td>
+                    <p class="p1">Hello Captain !</p>
+                </td>
+            </tr>
+            <tr class="L2">
+                <td>
+                    <p class="p2">Your boat will soon be visible to the largest community of sailors who wish to rent privately. Welcome to SeaBnB!</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="title-container">
+        <p>Your Boat</p>
+    </div>
+        <div class="titleType">
+            <p>Type</p>
+            <div class="button-container">
+                <div *ngFor="let boat of boats">
+                    <button [ngClass]="{'btnType': !boat.isActive, 'active': boat.isActive}" (click)="toggleBackgroundColor(boat)">
+                        <div class="contentWrapper">
+                            <img class="imgType" [src]="boat.imagePath">
+                            <p class="textType">{{ boat.name }}</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="col">
+            Boat's name : <input type="text">
+            City : <input type="text">
+            Is your boat rented with skipper ? 
+            <select>
+            <option value="" disabled selected>Select...</option>
+            <option>With</option>
+            <option>Without</option>
+            </select>
+            Constructor : <input type="text">
+            Lenght (m) : <input type="number">
+            Is your boat motorized ? 
+            <select id="choix" name="choix" [(ngModel)]="selectedOption">
+                <option value="option1">Yes</option>
+                <option value="option2">No</option>
+            </select>
+            <input type="text" class="spacer">                 
+            
+            </div>
+            <div class="col">
+            Country : <input type="text">
+            Port : <input type="text">
+            Bail amount : <input type="number">
+            Year of construction : <input type="text">
+            Width (m) : <input type="number">
+            <label for="inputText" *ngIf="selectedOption !== 'option2'">Enigne's name</label>
+            <input type="text" id="inputText" name="inputText" [(ngModel)]="inputText" *ngIf="selectedOption !== 'option2'">
+            <label for="inputText" *ngIf="selectedOption !== 'option2'">Max speed</label>
+            <input type="text" id="inputText" name="inputText" [(ngModel)]="inputText" *ngIf="selectedOption !== 'option2'">
+            </div>
+        </div>
+        <div>
+            <button type="submit" class="button-save">Save</button>
+        </div>
+        <p class="picture">Picture</p>
+        <div class="text1">
+            Drag and drop here to upload your photos
+        </div>
+        <div class="text2">
+            For the cover, choose a photo that shows the boat as a whole. Next, add more photos of the details and interior of the boat.
+        </div>
+        <div class="drop-container" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
+            <ng-icon name="heroCamera" class="icon"></ng-icon>
+            <p class="text-below-icon">Drag and drop images here</p>
+          </div>
+          <div class="imgDropped-container">
+              <div *ngFor="let image of images; let i = index" class="imgDropped">
+                <img [src]="image" alt="Image">
+                <button class="delete-button" (click)="deleteImage(i)"><ng-icon name="heroTrash" class="icon"></ng-icon></button>
+              </div>
+          </div>
+          <footer>
+              
+          </footer>
+</body>
+</html>

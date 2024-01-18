@@ -1,0 +1,10 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: seabnb-frontend
+    ports:
+      - 4200:80
+    restart: always
