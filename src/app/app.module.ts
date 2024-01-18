@@ -64,7 +64,7 @@ import { FormsModule } from '@angular/forms';
       heroChevronRight,
       heroArrowUturnLeft,
       heroTrash,
-      heroDocumentPlus
+      heroDocumentPlus,
     }),
   ],
   providers: [],
