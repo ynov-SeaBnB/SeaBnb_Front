@@ -25,5 +25,7 @@ export class NavbarComponent {
 
     // Vérifiez si c'est la page d'accueil
     this.isHomePage = currentUrl === '/home';
+    this.isHomePage = currentUrl === '/description';
+
   }
 }
