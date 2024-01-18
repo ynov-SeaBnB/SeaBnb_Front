@@ -66,7 +66,8 @@ export class BoatsComponent {
   selectedOption: string = 'option2';
   inputText: string = '';
 
-  images: string[] = []; //
+  images: string[] = [];
+  documents: File[] = [];
 
   onDragOver(event: Event): void {
     event.preventDefault();
@@ -88,6 +89,19 @@ export class BoatsComponent {
         }
       }
     }
+  }
+  onDropDocument(event: DragEvent) {
+    // Gérer le glisser-déposer pour les documents
+    const files = event.dataTransfer?.files;
+
+    if (files) {
+      for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        this.documents.push(file);
+      }
+    }
+
+    event.preventDefault();
   }
 
   resizeImage(base64Str: string, maxWidth: number, maxHeight: number): void {
@@ -125,5 +139,8 @@ export class BoatsComponent {
     if (index >= 0 && index < this.images.length) {
       this.images.splice(index, 1);
     }
+  }
+  deleteDocument(index: number) {
+    this.documents.splice(index, 1);
   }
 }

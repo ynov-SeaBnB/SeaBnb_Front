@@ -84,6 +84,23 @@
                 <button class="delete-button" (click)="deleteImage(i)"><ng-icon name="heroTrash" class="icon"></ng-icon></button>
               </div>
           </div>
+          <p class="picture">Mandatory Files</p>
+        <div class="text1">
+            Drag and drop here to add your files
+        </div>
+        <div class="text2">
+            For add your boat, please add your id card, registration certificate, registration port and annual taxes.
+        </div>
+          <div class="drop-container" (drop)="onDropDocument($event)" (dragover)="onDragOver($event)">
+            <ng-icon name="heroDocumentPlus" class="icon"></ng-icon>
+            <p class="text-below-icon">Drag and drop documents here</p>
+        </div>
+        <div class="documentDropped-container">
+            <div *ngFor="let document of documents; let i = index" class="documentDropped">
+                <p>{{ document.name }}</p>
+                <button class="delete-button" (click)="deleteDocument(i)"><ng-icon name="heroTrash" class="icon"></ng-icon></button>
+            </div>
+        </div>
         </body>
         <app-footer></app-footer>
 </html>
