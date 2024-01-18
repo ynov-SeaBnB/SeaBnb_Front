@@ -43,194 +43,18 @@
             </div>
         </div>
         <div class="image-grid">
-            <a class="link2" href="#" routerLink="/description">
+            <a *ngFor="let boat of boatsDetails" class="link2" href="#" routerLink="/description">
                 <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
+                    <img src="../../assets/images/Bateau.jpg" alt="Boat Image">
                     <div class="designText">
                         <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
+                            <h4>{{ boat.port }}, {{ boat.country }}</h4>
+                            <p>{{ boat.formattedAvailability }}</p>
+                            <p><span class="money">{{ boat.deposit }} €</span> par jour</p>
                         </div>
                         <div class="centerstars">
                             <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-            <a class="link2" href="#" routerLink="/description">
-                <div class="image-item">
-                    <img src="../../assets/images/Bateau.jpg" alt="Image 1">
-                    <div class="designText">
-                        <div class="image-caption">
-                            <h4>La souche, France</h4>
-                            <p>13 janv - 3 fev</p>
-                            <p><span class="money">100 €</span> par jour</p>
-                        </div>
-                        <div class="centerstars">
-                            <ng-icon class="logo6" name="heroStarSolid"></ng-icon>
-                            <p>4.5</p>
+                            <p>{{ boat.note }}</p>
                         </div>
                     </div>
                 </div>
@@ -243,23 +67,6 @@
     </div>
 
 </body>
-
-<div class="image-grid">
-    <a *ngFor="let boat of boatsDetails" class="link2" href="#" routerLink="/description">
-        <div class="image-item">
-            <img [src]="boat.pictures?.[0]?.url" alt="{{ boat.name }}">
-            <div class="designText">
-                <div class="image-caption">
-                    <h4>{{ boat.name }}, {{ boat.country }}</h4>
-                    <p>{{ boat.length }} m - {{ boat.width }} m</p>
-                    <p><span class="money">{{ boat.deposit }}</span> - Note: {{ boat.note }}</p>
-                </div>
-                <div class="centerstars">
-                </div>
-            </div>
-        </div>
-    </a>
-</div>
 
 <app-footer></app-footer>
 

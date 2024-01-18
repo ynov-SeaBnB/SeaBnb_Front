@@ -7,27 +7,24 @@
 </head>
 <body>
 
-
 <a href="/home">
   <img alt="logo" class="logo" src="../../assets/images/logo.png"/>
 </a>
 
-<!-- Copilot add a line -->
-
 <div class="login-card">
   <h2 class="login-card-title">Log in to SeaBnB</h2>
   <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-    <div *ngIf="email?.invalid && (email?.dirty || email?.touched)">
-      <div *ngIf="getControlErrors('email')?.required" class="errorOnForm">
+    <div *ngIf="emailAddress?.invalid && (emailAddress?.dirty || emailAddress?.touched)">
+      <div *ngIf="getControlErrors('emailAddress')?.required" class="errorOnForm">
         Email is required.
       </div>
-      <div *ngIf="getControlErrors('email')?.email" class="errorOnForm">
+      <div *ngIf="getControlErrors('emailAddress')?.emailAddress" class="errorOnForm">
         Email must be a valid email address.
       </div>
     </div>
     <input
-      formControlName="email"
-      id="email"
+      formControlName="emailAddress"
+      id="emailAddress"
       placeholder="Email"
       required
       type="email"
@@ -52,6 +49,8 @@
     />
 
     <button [disabled]="!loginForm.valid" type="submit">Login</button>
+
+
     <a href="/register">Sign up</a>
   </form>
 </div>
