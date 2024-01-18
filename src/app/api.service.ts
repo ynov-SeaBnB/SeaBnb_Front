@@ -21,5 +21,7 @@ export class ApiService {
     return this.http.get<any[]>(`${this.API_URL}/boats`);
   }
 
-  // Ajoutez d'autres appels d'API au besoin...
+  createBoat(boatData: any): Observable<any> {
+    return this.http.post(`${this.API_URL}/boats`, boatData);
+  }
 }

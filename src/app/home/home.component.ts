@@ -13,8 +13,17 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.apiService.getBoatsDetails().subscribe((data: any[]) => {
-      this.boatsDetails = data;
-      console.log(this.boatsDetails);
+      this.boatsDetails = data.map(boat => {
+        boat.port = JSON.parse(boat.port)[1];
+
+        const availabilityObject = JSON.parse(boat.availability);
+
+        const firstAvailabilityKey = Object.keys(availabilityObject)[0];
+        const firstAvailabilityValue = availabilityObject[firstAvailabilityKey];
+
+        boat.formattedAvailability = `${firstAvailabilityKey} - ${firstAvailabilityValue}`;
+        return boat;
+      });
     });
   }
 }
