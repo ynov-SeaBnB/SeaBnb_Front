@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -14,5 +14,16 @@ export class NavbarComponent {
 
   closeModal() {
     this.showModal = false;
+  }
+  isHomePage: boolean = false;
+
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+    // Obtenez l'URL actuelle
+    const currentUrl = this.router.url;
+
+    // Vérifiez si c'est la page d'accueil
+    this.isHomePage = currentUrl === '/home';
   }
 }
