@@ -90,10 +90,7 @@
             <button class="delete-button" (click)="deleteImage(i)"><ng-icon name="heroTrash"
                     class="icon"></ng-icon></button>
         </div>
-        <div class="drop-container" (drop)="onDrop($event)" (dragover)="onDragOver($event)">
-            <ng-icon name="heroCamera" class="icon"></ng-icon>
-            <p class="text-below-icon">Drag and drop images here</p>
-          </div>
+    </div>
           <div class="imgDropped-container">
               <div *ngFor="let image of images; let i = index" class="imgDropped">
                 <img [src]="image" alt="Image">
@@ -117,6 +114,6 @@
                 <button class="delete-button" (click)="deleteDocument(i)"><ng-icon name="heroTrash" class="icon"></ng-icon></button>
             </div>
         </div>
-        </body>
+</body>
 <app-footer></app-footer>
 </html>
