@@ -29,7 +29,8 @@ de laisser des commentaires est conditionnée à la location effective du bateau
 une liste de liens pertinents.
 
 4. **Home :**
-   - Page d'accueil principale du site.
+   - Le composant "Boats" assume la responsabilité de l'affichage des annonces associées aux bateaux. Il inclut une représentation visuelle du bateau sous la forme d'une image, des informations sur le tarif journalier,
+une évaluation globale attribuée par les utilisateurs précédents, ainsi que la prochaine date de disponibilité pour la location.
 
 5. **Login :**
    - Interface de connexion pour les utilisateurs.
