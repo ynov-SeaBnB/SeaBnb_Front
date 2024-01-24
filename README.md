@@ -45,7 +45,8 @@ pratique.
    - Composant dédié à l'affichage des informations du propriétaire.
 
 8. **Profil :**
-   - Gestion du profil utilisateur.
+   - Le composant "Profil" offre une interface dédiée à la gestion complète du profil utilisateur. Les utilisateurs peuvent accéder à cette section pour mettre à jour et personnaliser leurs informations personnelles, y
+compris les détails de contact, les préférences et d'autres paramètres pertinents.
 
 9. **Register :**
    - Le composant "Register" représente l'interface conçue pour le processus de création de compte. Cette section cruciale de l'application guide les utilisateurs tout au long du processus d'inscription en leur
