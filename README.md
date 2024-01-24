@@ -48,7 +48,8 @@ pratique.
    - Gestion du profil utilisateur.
 
 9. **Register :**
-   - Formulaire d'inscription pour les nouveaux utilisateurs.
+   - Le composant "Register" représente l'interface conçue pour le processus de création de compte. Cette section cruciale de l'application guide les utilisateurs tout au long du processus d'inscription en leur
+fournissant des champs à remplir, permettant ainsi de créer leur compte personnel sur la plateforme "Seabnb".
 
 ## Fonctionnalités
 
