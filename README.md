@@ -2,12 +2,16 @@
 
 ## Introduction
 
-Bienvenue dans la documentation officielle de "Seabnb", une plateforme web conçue pour la location de bateaux, offrant non seulement des options d'hébergement mais également la possibilité d'utiliser ces bateaux. Inspiré par le modèle d'Airbnb, ce document a pour objectif de mettre à votre disposition toutes les informations essentielles nécessaires pour comprendre, utiliser et contribuer au projet, que ce soit en tant qu'utilisateur ou contributeur.
+Bienvenue dans la documentation officielle de "Seabnb", une plateforme web conçue pour la location de bateaux, offrant non seulement des options d'hébergement mais également la possibilité d'utiliser ces bateaux. Inspiré
+par le modèle d'Airbnb, ce document a pour objectif de mettre à votre disposition toutes les informations essentielles nécessaires pour comprendre, utiliser et contribuer au projet, que ce soit en tant qu'utilisateur ou
+contributeur.
 
 ## Architecture du Site
 
 
-Le site "Seabnb" repose sur le framework Angular, reconnu comme l'un des plus largement utilisés à l'échelle mondiale. Pour concevoir son architecture, nous avons opté pour l'architecture de base afin de garantir une cohérence au sein du groupe de développeurs et d'assurer une structure solide et modulaire. Une alternative aurait été de personnaliser davantage l'architecture en organisant les composants de page dans un dossier distinct, tandis que les composants réutilisables seraient regroupés dans un autre répertoire, améliorant ainsi l'organisation générale du projet.
+Le site "Seabnb" repose sur le framework Angular, reconnu comme l'un des plus largement utilisés à l'échelle mondiale. Pour concevoir son architecture, nous avons opté pour l'architecture de base afin de garantir une
+cohérence au sein du groupe de développeurs et d'assurer une structure solide et modulaire. Une alternative aurait été de personnaliser davantage l'architecture en organisant les composants de page dans un dossier
+distinct, tandis que les composants réutilisables seraient regroupés dans un autre répertoire, améliorant ainsi l'organisation générale du projet.
 
 ### Composants Du Projet
 
@@ -16,7 +20,9 @@ Le site "Seabnb" repose sur le framework Angular, reconnu comme l'un des plus la
 une évaluation globale attribuée par les utilisateurs précédents, ainsi que la prochaine date de disponibilité pour la location.
 
 2. **Description :**
-   - Composant gérant la présentation détaillée des annonces.
+   - Le composant "Description" prend en charge la présentation détaillée des annonces en fournissant plusieurs images du bateau concerné. De plus, il intègre un calendrier permettant aux utilisateurs de planifier la
+location du bateau, ainsi qu'une section de commentaires située en bas de la page, offrant aux utilisateurs la possibilité de consulter les avis et expériences antérieurs. Il est important de noter que la possibilité
+de laisser des commentaires est conditionnée à la location effective du bateau, assurant ainsi des retours d'expérience authentiques.
 
 3. **Footer :**
    - Composant représentant le pied de page du site.
