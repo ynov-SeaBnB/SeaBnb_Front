@@ -6,7 +6,8 @@ Bienvenue dans la documentation officielle de "Seabnb", une plateforme web conç
 
 ## Architecture du Site
 
-"Seabnb" est construit en utilisant le framework Angular. L'architecture de base d'Angular a été adoptée pour assurer une structure solide et modulaire.
+
+Le site "Seabnb" repose sur le framework Angular, reconnu comme l'un des plus largement utilisés à l'échelle mondiale. Pour concevoir son architecture, nous avons opté pour l'architecture de base afin de garantir une cohérence au sein du groupe de développeurs et d'assurer une structure solide et modulaire. Une alternative aurait été de personnaliser davantage l'architecture en organisant les composants de page dans un dossier distinct, tandis que les composants réutilisables seraient regroupés dans un autre répertoire, améliorant ainsi l'organisation générale du projet.
 
 ### Composants Principaux
 
