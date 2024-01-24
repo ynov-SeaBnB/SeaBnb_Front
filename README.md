@@ -16,8 +16,8 @@ distinct, tandis que les composants réutilisables seraient regroupés dans un a
 ### Composants Du Projet
 
 1. **Boats :**
-   - Le composant "Boats" assume la responsabilité de l'affichage des annonces associées aux bateaux. Il inclut une représentation visuelle du bateau sous la forme d'une image, des informations sur le tarif journalier,
-une évaluation globale attribuée par les utilisateurs précédents, ainsi que la prochaine date de disponibilité pour la location.
+   - Le composant "Boats" est conçu pour faciliter l'ajout de bateaux à louer sur la plateforme. Cette page présente plusieurs champs à compléter, ainsi que des documents obligatoires tels que le certificat
+d'immatriculation du bateau. Les utilisateurs sont guidés à travers un processus détaillé de saisie d'informations, garantissant une présentation complète et précise de chaque bateau mis en location sur la plateforme.
 
 2. **Description :**
    - Le composant "Description" prend en charge la présentation détaillée des annonces en fournissant plusieurs images du bateau concerné. De plus, il intègre un calendrier permettant aux utilisateurs de planifier la
