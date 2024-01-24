@@ -56,50 +56,53 @@ fournissant des champs à remplir, permettant ainsi de créer leur compte person
 
 ## Fonctionnalités
 
-"Seabnb" propose une série de fonctionnalités pour répondre aux besoins des utilisateurs.
+**Seabnb** propose une série de fonctionnalités variées pour répondre aux besoins des utilisateurs.
 
-1. **Recherche d'Annonces :**
-   - Les utilisateurs peuvent rechercher des annonces disponibles en utilisant divers critères tels que la localisation, la taille, etc.
+### Recherche d'Annonces
 
-2. **Publication d'Annonces :**
-   - Les propriétaires peuvent publier des annonces pour leurs biens disponibles, y compris des détails sur les bateaux.
+Les utilisateurs peuvent effectuer des recherches d'annonces en utilisant divers critères tels que la localisation, la taille, etc.
 
-3. **Connexion et Inscription :**
-   - Les utilisateurs peuvent créer un compte et se connecter pour accéder à des fonctionnalités personnalisées.
+### Publication d'Annonces
+
+Les propriétaires ont la possibilité de publier des annonces détaillées concernant leurs biens disponibles, incluant des informations spécifiques sur les bateaux.
+
+### Connexion et Inscription
+
+Les utilisateurs peuvent créer un compte et se connecter pour accéder à des fonctionnalités personnalisées et profiter pleinement de l'expérience **Seabnb**.
 
 ## Guide d'Utilisation
 
-Cette section explique comment utiliser "Seabnb" du début à la fin.
+Cette section offre un guide complet sur l'utilisation de **Seabnb** du début à la fin.
 
-1. **Créer un Compte :**
-   - Suivez ces instructions pour créer un compte utilisateur sur "Seabnb."
+### Créer un Compte
 
-2. **Publier une Annonce :**
-   - Découvrez comment publier une annonce pour votre bien, y compris les détails spécifiques aux bateaux.
+Suivez ces instructions détaillées pour créer un compte utilisateur sur **Seabnb**.
 
-3. **Rechercher des Annonces :**
-   - Consultez ce guide pour apprendre à rechercher et explorer les annonces disponibles, en filtrant selon vos préférences.
+### Publier une Annonce
+
+Découvrez comment publier une annonce pour votre bien, en mettant en avant les détails spécifiques aux bateaux que vous souhaitez louer.
+
+### Rechercher des Annonces
+
+Consultez ce guide pour apprendre à rechercher et explorer les annonces disponibles, en utilisant des filtres adaptés à vos préférences.
 
 ## Gestion des Utilisateurs
 
-"Seabnb" gère les utilisateurs avec différentes autorisations.
+**Seabnb** gère les utilisateurs en attribuant différentes autorisations en fonction de leur rôle.
 
 ### Niveaux d'Accès
 
-1. **Utilisateur Normal :**
-   - Les utilisateurs normaux ont des capacités et des restrictions spécifiques.
-
-2. **Administrateur :**
-   - Les administrateurs bénéficient de privilèges spéciaux pour la gestion du site.
+- **Utilisateur Normal :** Les utilisateurs normaux disposent de capacités et de restrictions spécifiques pour assurer une expérience adaptée.
+- **Administrateur :** Les administrateurs bénéficient de privilèges spéciaux pour la gestion globale du site.
 
 ## Base de Données
 
-Le backend de "Seabnb" est alimenté par une base de données MySQL, gérée par une API construite avec Node.js et Express.js.
+Le backend de **Seabnb** est alimenté par une base de données MySQL, gérée par une API construite avec Node.js et Express.js.
 
 ### Structure de la Base de Données
 
-Description détaillée de la structure des tables dans la base de données.
+Cette section fournit une description détaillée de la structure des tables dans la base de données, offrant une compréhension approfondie de la gestion des données.
 
-### Déploiement avec Docker Compose
+## Déploiement avec Docker Compose
 
-"Seabnb" utilise Docker Compose pour simplifier le déploiement de l'application. Suivez les instructions appropriées pour déployer le frontend et le backend de manière efficace.
+**Seabnb** utilise Docker Compose pour simplifier le déploiement de l'application. Suivez les instructions fournies pour déployer efficacement le frontend et le backend, garantissant ainsi une mise en production fluide de l'ensemble du système.
