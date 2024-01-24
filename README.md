@@ -92,8 +92,10 @@ Consultez ce guide pour apprendre à rechercher et explorer les annonces disponi
 
 ### Niveaux d'Accès
 
-- **Utilisateur Normal :** Les utilisateurs normaux disposent de capacités et de restrictions spécifiques pour assurer une expérience adaptée.
-- **Administrateur :** Les administrateurs bénéficient de privilèges spéciaux pour la gestion globale du site.
+- **Utilisateur Externe :** Les utilisateurs externes ont la possibilité de consulter les annonces publiées, mais ne peuvent pas effectuer de réservation sans créer un compte au préalable.
+- **Utilisateur Normal :** Les utilisateurs normaux, c'est-à-dire ceux qui possèdent un compte, bénéficient de capacités et de restrictions spécifiques visant à assurer une expérience adaptée à leur statut.
+- **Administrateur :** Les administrateurs jouissent de privilèges particuliers pour la gestion globale du site, leur permettant d'effectuer des actions spécifiques et de prendre en charge les responsabilités
+administratives.
 
 ## Base de Données
 
