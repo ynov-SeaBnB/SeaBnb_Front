@@ -1,27 +1,88 @@
-# SeaBnBFront
+# Documentation du Projet "Seabnb"
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+## Introduction
 
-## Development server
+Bienvenue dans la documentation officielle de "Seabnb", une plateforme web inspirée d'Airbnb, créée pour les besoins de l'école. Ce document vise à fournir toutes les informations nécessaires pour comprendre, utiliser et contribuer au projet.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Architecture du Site
 
-## Code scaffolding
+"Seabnb" est construit en utilisant le framework Angular. L'architecture de base d'Angular a été adoptée pour assurer une structure solide et modulaire.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Composants Principaux
 
-## Build
+1. **Boats :**
+   - Composant responsable de l'affichage des annonces liées aux bateaux.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. **Description :**
+   - Composant gérant la présentation détaillée des annonces.
 
-## Running unit tests
+3. **Footer :**
+   - Composant représentant le pied de page du site.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. **Home :**
+   - Page d'accueil principale du site.
 
-## Running end-to-end tests
+5. **Login :**
+   - Interface de connexion pour les utilisateurs.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+6. **Navbar :**
+   - Barre de navigation principale du site.
 
-## Further help
+7. **Owner :**
+   - Composant dédié à l'affichage des informations du propriétaire.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+8. **Profil :**
+   - Gestion du profil utilisateur.
+
+9. **Register :**
+   - Formulaire d'inscription pour les nouveaux utilisateurs.
+
+## Fonctionnalités
+
+"Seabnb" propose une série de fonctionnalités pour répondre aux besoins des utilisateurs.
+
+1. **Recherche d'Annonces :**
+   - Les utilisateurs peuvent rechercher des annonces disponibles en utilisant divers critères tels que la localisation, la taille, etc.
+
+2. **Publication d'Annonces :**
+   - Les propriétaires peuvent publier des annonces pour leurs biens disponibles, y compris des détails sur les bateaux.
+
+3. **Connexion et Inscription :**
+   - Les utilisateurs peuvent créer un compte et se connecter pour accéder à des fonctionnalités personnalisées.
+
+## Guide d'Utilisation
+
+Cette section explique comment utiliser "Seabnb" du début à la fin.
+
+1. **Créer un Compte :**
+   - Suivez ces instructions pour créer un compte utilisateur sur "Seabnb."
+
+2. **Publier une Annonce :**
+   - Découvrez comment publier une annonce pour votre bien, y compris les détails spécifiques aux bateaux.
+
+3. **Rechercher des Annonces :**
+   - Consultez ce guide pour apprendre à rechercher et explorer les annonces disponibles, en filtrant selon vos préférences.
+
+## Gestion des Utilisateurs
+
+"Seabnb" gère les utilisateurs avec différentes autorisations.
+
+### Niveaux d'Accès
+
+1. **Utilisateur Normal :**
+   - Les utilisateurs normaux ont des capacités et des restrictions spécifiques.
+
+2. **Administrateur :**
+   - Les administrateurs bénéficient de privilèges spéciaux pour la gestion du site.
+
+## Base de Données
+
+Le backend de "Seabnb" est alimenté par une base de données MySQL, gérée par une API construite avec Node.js et Express.js.
+
+### Structure de la Base de Données
+
+Description détaillée de la structure des tables dans la base de données.
+
+### Déploiement avec Docker Compose
+
+"Seabnb" utilise Docker Compose pour simplifier le déploiement de l'application. Suivez les instructions appropriées pour déployer le frontend et le backend de manière efficace.
