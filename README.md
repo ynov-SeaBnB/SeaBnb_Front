@@ -33,7 +33,8 @@ une liste de liens pertinents.
 une évaluation globale attribuée par les utilisateurs précédents, ainsi que la prochaine date de disponibilité pour la location.
 
 5. **Login :**
-   - Interface de connexion pour les utilisateurs.
+   - Le composant "Login" représente l'interface dédiée à la connexion des utilisateurs. Cet élément de l'application offre un point d'accès sécurisé, permettant aux utilisateurs enregistrés d'entrer leurs identifiants
+afin d'accéder à leurs comptes personnels. Grâce à cette interface de connexion, les utilisateurs peuvent profiter des fonctionnalités offertes par la plateforme "Seabnb".
 
 6. **Navbar :**
    - Barre de navigation principale du site.
