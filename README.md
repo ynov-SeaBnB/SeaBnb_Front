@@ -105,4 +105,6 @@ Cette section fournit une description détaillée de la structure des tables dan
 
 ## Déploiement avec Docker Compose
 
-**Seabnb** utilise Docker Compose pour simplifier le déploiement de l'application. Suivez les instructions fournies pour déployer efficacement le frontend et le backend, garantissant ainsi une mise en production fluide de l'ensemble du système.
+**Seabnb** adopte Docker Compose pour simplifier le processus de déploiement de l'application. Il convient de noter que le déploiement est effectué de manière distincte, avec une configuration spécifique pour le
+front-end et une autre pour le back-end, assurant ainsi une gestion efficace de chaque composant. En pratique, cela se traduit par un déploiement utilisant Docker Compose pour le front-end, et un
+déploiement utilisant aussi Docker Compose pour le back-end, garantissant une gestion propre et organisée de l'ensemble du système.
