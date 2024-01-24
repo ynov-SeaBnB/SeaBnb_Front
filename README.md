@@ -25,7 +25,8 @@ location du bateau, ainsi qu'une section de commentaires située en bas de la pa
 de laisser des commentaires est conditionnée à la location effective du bateau, assurant ainsi des retours d'expérience authentiques.
 
 3. **Footer :**
-   - Composant représentant le pied de page du site.
+   - Le composant "Footer" représente la section inférieure de la page web et offre une navigation pratique vers différentes sections du site. Il comprend plusieurs sections distinctes, chacune avec un titre explicite et
+une liste de liens pertinents.
 
 4. **Home :**
    - Page d'accueil principale du site.
