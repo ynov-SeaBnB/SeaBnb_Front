@@ -37,7 +37,9 @@ une évaluation globale attribuée par les utilisateurs précédents, ainsi que 
 afin d'accéder à leurs comptes personnels. Grâce à cette interface de connexion, les utilisateurs peuvent profiter des fonctionnalités offertes par la plateforme "Seabnb".
 
 6. **Navbar :**
-   - Barre de navigation principale du site.
+   - Le composant "Navbar" constitue la barre de navigation principale du site, offrant une navigation intuitive et accessible. Une fonctionnalité importante est intégrée sous la forme d'une pop-up latérale qui apparaît
+en cliquant sur l'icône "burger". De plus, une mini-barre de navigation supplémentaire s'affiche uniquement sur la page "Home", permettant aux utilisateurs de filtrer les contenus spécifiques à cette page de manière
+pratique.
 
 7. **Owner :**
    - Composant dédié à l'affichage des informations du propriétaire.
