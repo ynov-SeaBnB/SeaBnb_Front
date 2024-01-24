@@ -42,7 +42,9 @@ en cliquant sur l'icône "burger". De plus, une mini-barre de navigation supplé
 pratique.
 
 7. **Owner :**
-   - Composant dédié à l'affichage des informations du propriétaire.
+   - Le composant "Owner" est spécifiquement conçu pour présenter de manière détaillée les informations du propriétaire. Il offre la possibilité de visualiser tous les bateaux mis en location par ce propriétaire, ainsi
+que de gérer les détails de la disponibilité, permettant de savoir quand chaque bateau est réservé. Grâce à cette interface, les propriétaires peuvent efficacement superviser leur flotte de bateaux, optimisant ainsi la
+gestion des locations et assurant une expérience utilisateur transparente.
 
 8. **Profil :**
    - Le composant "Profil" offre une interface dédiée à la gestion complète du profil utilisateur. Les utilisateurs peuvent accéder à cette section pour mettre à jour et personnaliser leurs informations personnelles, y
