@@ -105,16 +105,15 @@ populaires et des plus utilisés dans le développement d'applications web.
 ### Structure de la Base de Données
 
 1. **Table boat :**
-   - Cette table stocke les informations relatives aux bateaux disponibles à la location sur Seabnb.
-Chaque entrée dans la table représente un bateau spécifique et comprend des détails tels que le nom, les dimensions, les équipements, les spécifications, la disponibilité, le dépôt requis, la note attribuée par les
-utilisateurs, les documents de propriété, et l'identifiant du propriétaire du bateau. Les données sont structurées en utilisant des types de données appropriés (varchar, float, longtext) pour garantir la précision et
-l'efficacité du stockage.
+   - Cette table stocke les informations relatives aux bateaux disponibles à la location sur Seabnb. Chaque entrée dans la table représente un bateau spécifique et comprend des détails tels que le nom, les dimensions,
+les équipements, les spécifications, la disponibilité, le dépôt requis, la note attribuée par les utilisateurs, les documents de propriété, et l'identifiant du propriétaire du bateau. Les données sont structurées en
+utilisant des types de données appropriés (varchar, float, longtext) pour garantir la précision et l'efficacité du stockage.
 
 2. **Table comment :**
    - Cette table enregistre les commentaires laissés par les utilisateurs après avoir effectué une réservation sur Seabnb. Chaque entrée dans la table correspond à un commentaire spécifique associé à une réservation et
 contient le contenu du commentaire et l'identifiant de la réservation.
 
-3.**Table reservation :**
+3. **Table reservation :**
    - La table reservation stocke les détails de chaque réservation effectuée sur la plateforme. Chaque réservation est enregistrée avec des informations telles que la date de début et de fin de la réservation, le prix par
 nuit (PPN), la note attribuée par l'utilisateur, l'identifiant du client et l'identifiant du bateau réservé.
 
