@@ -99,7 +99,8 @@ administratives.
 
 ## Base de Données
 
-Le backend de **Seabnb** est alimenté par une base de données MySQL, gérée par une API construite avec Node.js et Express.js.
+Le backend de **Seabnb** est alimenté par une base de données MySQL et est géré par une API construite avec Node.js, utilisant le framework Express.js, qui est largement reconnu comme l'un des plus
+populaires et des plus utilisés dans le développement d'applications web.
 
 ### Structure de la Base de Données
 
