@@ -129,3 +129,4 @@ La structure de la base de données est conçue de manière à garantir une gest
 **Seabnb** adopte Docker Compose pour simplifier le processus de déploiement de l'application. Il convient de noter que le déploiement est effectué de manière distincte, avec une configuration spécifique pour le
 front-end et une autre pour le back-end, assurant ainsi une gestion efficace de chaque composant. En pratique, cela se traduit par un déploiement utilisant Docker Compose pour le front-end, et un
 déploiement utilisant aussi Docker Compose pour le back-end, garantissant une gestion propre et organisée de l'ensemble du système.
+Pour lancer l'application, exécutez la commande suivante : **docker-compose up -d** dans les deux repository github.
