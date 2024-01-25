@@ -58,15 +58,15 @@ fournissant des champs à remplir, permettant ainsi de créer leur compte person
 
 **Seabnb** propose une série de fonctionnalités variées pour répondre aux besoins des utilisateurs.
 
-   **Recherche d'Annonces :**
+**Recherche d'Annonces :**
 
    - Les utilisateurs peuvent effectuer des recherches d'annonces en utilisant divers critères tels que la localisation, la taille, etc. 
 
-   **Publication d'Annonces :**
+**Publication d'Annonces :**
 
    - Les propriétaires ont la possibilité de publier des annonces détaillées concernant leurs biens disponibles, incluant des informations spécifiques sur les bateaux.
 
-   **Connexion et Inscription :**
+**Connexion et Inscription :**
 
    - Les utilisateurs peuvent créer un compte et se connecter pour accéder à des fonctionnalités personnalisées et profiter pleinement de l'expérience **Seabnb**.
 
