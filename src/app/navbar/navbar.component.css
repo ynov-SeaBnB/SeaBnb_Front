@@ -8,8 +8,9 @@
 }
 
 .dontmove {
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 99;
 }
 
@@ -224,7 +225,7 @@
         height: 100vh;
         background: #fff;
         transition: 0.5s;
-        z-index: 999;
+        z-index: 100;
         border-top: 1px solid rgba(0, 0, 0, 0.2);
     }
 }

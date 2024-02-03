@@ -7,8 +7,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   showModal: boolean = false;
-  isScreenNineHundred: boolean = true;
-  isScreenSevenHundred: boolean = true;
+  isScreenNineHundred: boolean = false;
+  isScreenSevenHundred: boolean = false;
 
   @HostListener('window:resize')
   onResize() {
