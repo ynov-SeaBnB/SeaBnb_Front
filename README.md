@@ -101,13 +101,11 @@ Consultez ce guide pour apprendre à rechercher et explorer les annonces disponi
 
 - **Utilisateur Externe :** Les utilisateurs externes ont la possibilité de consulter les annonces publiées, mais ne peuvent pas effectuer de réservation sans créer un compte au préalable.
 - **Utilisateur Normal :** Les utilisateurs normaux, c'est-à-dire ceux qui possèdent un compte, bénéficient de capacités et de restrictions spécifiques visant à assurer une expérience adaptée à leur statut.
-- **Administrateur :** Les administrateurs jouissent de privilèges particuliers pour la gestion globale du site, leur permettant d'effectuer des actions spécifiques et de prendre en charge les responsabilités
-  administratives.
+- **Administrateur :** Les administrateurs ont des privilèges particuliers pour la gestion globale du site, leur permettant d'effectuer des actions spécifiques et de prendre en charge les responsabilités administratives.
 
 ## Base de Données
 
-Le backend de **Seabnb** est alimenté par une base de données MySQL et est géré par une API construite avec Node.js, utilisant le framework Express.js, qui est largement reconnu comme l'un des plus
-populaires et des plus utilisés dans le développement d'applications web.
+Le backend de **Seabnb** est alimenté par une base de données MySQL et est géré par une API construite avec Node.js, utilisant le framework Express.js, qui est largement reconnu comme l'un des plus populaires et des plus utilisés dans le développement d'applications web.
 
 ### Structure de la Base de Données
 
