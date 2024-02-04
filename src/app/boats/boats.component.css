@@ -1,19 +1,15 @@
-::ng-deep body {
+body {
     background-color: #ffffff;
+    margin-top: 7em;
 }
 
 .title {
-    display: flex;
     margin: auto;
     width: 65%;
-    height: 5em;
+    height: auto;
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 1.5em;
-}
-
-p {
-    display: flex;
+    padding: 1em;
 }
 
 .p1 {
@@ -21,27 +17,7 @@ p {
 }
 
 .p2 {
-    font-size: 1.1em;
-}
-
-table {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    margin-top: -2em;
-}
-
-.L1 {
-    display: flex;
-    margin: 0;
-    width: 100%;
-    height: 5em;
-
-}
-
-.L2 {
-    display: flex;
-    margin: 0;
+    font-size: 1em;
 }
 
 .title-container {
