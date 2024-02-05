@@ -219,7 +219,31 @@ select {
     border: 2px solid #dedede;
     cursor: pointer;
     flex-direction: column;
-}
+    margin-bottom: 5em;
+  }
+  .text-below-icon {
+   display: flex;
+   margin: auto;
+   font-size: 1em;
+  }
+  .drop-container img {
+   display: flex;
+   width: 2em;
+   height: 2em;
+  }
+  .drop-container .icon{
+    display: flex;
+    margin: auto;
+    font-size: 4em;
+  }
+  .documentDropped-container{
+    display: flex;
+    width: 65%;
+    margin: auto;
+  }
+  .documentDropped{
+   padding: 2em;
+  }
 
 .text-below-icon {
     display: flex;
@@ -266,4 +290,4 @@ select {
     display: flex;
     margin: auto;
     font-size: 2em;
-}
+  }

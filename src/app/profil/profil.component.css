@@ -16,7 +16,7 @@ nav {
     width: 1em;
     height: 1em;
     border-radius: 1.5em;
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin: 1em;
     cursor: pointer;
 }
@@ -81,7 +81,7 @@ img {
 
 .form {
     margin: 1em;
-    font-size: 1.3em;
+    font-size: 1em;
 }
 
 .row {
@@ -167,7 +167,8 @@ select {
     background: rgba(#274F8B, .2);
     border-radius: .2em .2em 0 0;
     padding: .4em;
-    font-size: 1.125em;
+    font-size: 1em;
+    font-size: 1em;
     box-shadow: 10px 5px 5px #e3e3e3;
 }
 
@@ -237,7 +238,6 @@ select {
 .button-file .icon {
     vertical-align: -10%;
 }
-
 /* Styles spécifiques pour les écrans plus petits */
 
 @media only screen and (max-width: 600px) {
