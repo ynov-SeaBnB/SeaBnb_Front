@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-navbar',
@@ -7,6 +7,14 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   showModal: boolean = false;
+  isScreenNineHundred: boolean = false;
+  isScreenSevenHundred: boolean = false;
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isScreenNineHundred = window.innerWidth < 900;
+    this.isScreenSevenHundred = window.innerWidth < 750;
+  }
 
   openModal() {
     this.showModal = true;
@@ -21,7 +29,6 @@ export class NavbarComponent {
 
   ngOnInit() {
     const currentUrl = this.router.url;
-
     this.isHomePage = currentUrl === '/home' || currentUrl === '/description';
   }
 }
