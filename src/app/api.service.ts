@@ -17,6 +17,17 @@ export class ApiService {
     return this.http.post(`${this.API_URL}/users/login`, credentials);
   }
 
+  register(userData: {
+    emailAddress: string;
+    password: string;
+    name: string;
+    firstName: string;
+    birthDate: string;
+    creationDate: string;
+  }): Observable<any> {
+    return this.http.post(`${this.API_URL}/users/register`, userData);
+  }
+
   getBoatsDetails(): Observable<any[]> {
     return this.http.get<any[]>(`${this.API_URL}/boats`);
   }

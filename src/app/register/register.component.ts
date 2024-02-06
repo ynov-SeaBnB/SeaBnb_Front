@@ -6,6 +6,7 @@ import {
   ValidationErrors,
   Validators,
 } from '@angular/forms';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-register',
@@ -34,12 +35,34 @@ export class RegisterComponent {
     },
   );
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private fb: FormBuilder,
+    private apiService: ApiService,
+  ) {}
 
   onSubmit() {
     if (this.signUpForm.valid) {
-      console.log('Form submitted');
-    } else {
+      const userData = {
+        // @ts-ignore
+        name: this.signUpForm.get('firstName').value,
+        // @ts-ignore
+        firstName: this.signUpForm.get('lastName').value,
+        // @ts-ignore
+        birthDate: this.signUpForm.get('birthDate').value,
+        // @ts-ignore
+        emailAddress: this.signUpForm.get('email').value,
+        // @ts-ignore
+        password: this.signUpForm.get('password').value,
+        creationDate: new Date().toISOString(), // CURRENT DATE
+      };
+
+      console.log('Sending user data to backend:', userData);
+
+      // Call your API service to register the user
+      this.apiService.register(userData).subscribe(
+        (success: any) => console.log('User registered', success),
+        (error: any) => console.error('Registration failed', error),
+      );
     }
   }
 
