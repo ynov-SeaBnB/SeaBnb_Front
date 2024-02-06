@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Inter';
+    src: url('../../assets/polices/Inter-VariableFont_slnt_wght.ttf') format('truetype');
+}
+
 body {
     background-color: #ffffff;
     margin-top: 7em;
