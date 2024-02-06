@@ -8,6 +8,7 @@ import { OwnerComponent } from './owner/owner.component';
 import { DescriptionComponent } from './description/description.component';
 import { BoatsComponent } from './boats/boats.component';
 import { PropertiesComponent } from './properties/properties.component';
+import { ReservationsComponent } from './reservations/reservations.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -18,6 +19,8 @@ export const routes: Routes = [
   { path: 'properties', component: PropertiesComponent },
   { path: 'description', component: DescriptionComponent },
   { path: 'boats', component: BoatsComponent },
+  { path: 'reservations', component: ReservationsComponent },
+
 ];
 
 @NgModule({
