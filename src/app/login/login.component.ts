@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 interface ValidationError {
   required?: boolean;
@@ -20,6 +21,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private apiService: ApiService,
+    private router: Router,
   ) {}
 
   // Specific getters for each form control
@@ -41,7 +43,11 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     console.log(this.loginForm.value);
     this.apiService.login(this.loginForm.value).subscribe(
-      (success: any) => console.log('User logged in', success),
+      (success: any) => {
+        console.log('User logged in', success);
+        localStorage.setItem('id', success.id);
+        this.router.navigate(['/home']);
+      },
       (error: any) => console.error('Login failed', error),
     );
   }

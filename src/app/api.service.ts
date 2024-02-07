@@ -35,4 +35,8 @@ export class ApiService {
   createBoat(boatData: any): Observable<any> {
     return this.http.post(`${this.API_URL}/boats`, boatData);
   }
+
+  getProfil() {
+    return this.http.get(`${this.API_URL}/users/${localStorage.getItem('id')}`);
+  }
 }

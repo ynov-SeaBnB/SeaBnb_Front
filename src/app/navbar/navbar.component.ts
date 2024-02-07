@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -9,6 +10,9 @@ export class NavbarComponent {
   showModal: boolean = false;
   isScreenNineHundred: boolean = false;
   isScreenSevenHundred: boolean = false;
+  isHomePage: boolean = false;
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.onResize();
@@ -29,7 +33,13 @@ export class NavbarComponent {
   closeModal() {
     this.showModal = false;
   }
-  isHomePage: boolean = false;
 
-  constructor(private router: Router) {}
+  isLoggedIn() {
+    return localStorage.getItem('id');
+  }
+
+  logOut() {
+    localStorage.removeItem('id');
+    this.router.navigate(['/login']);
+  }
 }

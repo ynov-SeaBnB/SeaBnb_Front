@@ -1,6 +1,5 @@
-import { Component, numberAttribute } from '@angular/core';
-import { NgIconsModule } from '@ng-icons/core';
-import { FormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-profil',
@@ -9,6 +8,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class ProfilComponent {
   url: any = '';
+  showForm: boolean = true;
+  userProfil: any = null;
+
+  constructor(private ApiService: ApiService) {
+    this.ApiService.getProfil().subscribe((data: any) => {
+      console.log(data);
+      this.userProfil = data;
+    });
+  }
 
   onSelectFile(event: any) {
     if (event.target.files && event.target.files[0]) {
@@ -24,7 +32,7 @@ export class ProfilComponent {
       };
     }
   }
-  showForm: boolean = true;
+
   toggleForms() {
     this.showForm = !this.showForm;
   }
