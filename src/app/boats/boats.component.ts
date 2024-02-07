@@ -35,32 +35,32 @@ export class BoatsComponent {
   constructor(private apiService: ApiService) { }
 
   boatFormData: BoatFormData = {
-    name: 'pierree',
-    width: 14.7,
-    length: 3.8,
+    name: '',
+    width: 0,
+    length: 0,
     motorized: ['Yes', 'Caterpillar 3412 Е x 2'],
-    port: ['Port de roses', 'roses'],
-    country: 'Espagne',
-    type: 'Schooner',
-    skipper: 'Yes',
+    port: ['efzgr', 'aezgr'],
+    country: '',
+    type: 'pas la bonne donnée',
+    skipper: '',
     pictures: [
       '/src/assets/images/idUser/nameBateau/img1',
       '/src/assets/images/idUser/nameBateau/img2',
       '/src/assets/images/idUser/nameBateau/img3',
     ],
-    equipments: ['Kitchen', 'Bedroom'],
+    equipments: ['efgrz', 'efzgr'],
     specifications: {
       AvgSpeed: 10.3,
       MaxSpeed: 13.8,
-      Constructor: 'Timmerman Yachts',
-      ConstructionYear: 2014,
+      Constructor: 'tkt',
+      ConstructionYear: 0,
     },
     availability: {
       '2023-10-12': '2023-10-15',
       '2023-10-18': '2023-10-23',
     },
-    deposit: 250,
-    note: 3.9,
+    deposit: 0,
+    note: 5,
     propertyPapers: [
       '/src/assets/documents/idUser/nameBateau/carteIdentite',
       '/src/assets/documents/idUser/nameBateau/certificatEnregistrement',
@@ -119,6 +119,7 @@ export class BoatsComponent {
         boat.isActive = false;
       }
     });
+    this.boatFormData.type = clickedBoat.name;
     clickedBoat.isActive = !clickedBoat.isActive;
   }
 

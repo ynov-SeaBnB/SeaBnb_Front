@@ -47,7 +47,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    gap: 4em;
+    gap: 3em;
     padding: 5em;
     margin: auto;
     flex-direction: row;
@@ -225,30 +225,35 @@ select {
     cursor: pointer;
     flex-direction: column;
     margin-bottom: 5em;
-  }
-  .text-below-icon {
-   display: flex;
-   margin: auto;
-   font-size: 1em;
-  }
-  .drop-container img {
-   display: flex;
-   width: 2em;
-   height: 2em;
-  }
-  .drop-container .icon{
+}
+
+.text-below-icon {
+    display: flex;
+    margin: auto;
+    font-size: 1em;
+}
+
+.drop-container img {
+    display: flex;
+    width: 2em;
+    height: 2em;
+}
+
+.drop-container .icon {
     display: flex;
     margin: auto;
     font-size: 4em;
-  }
-  .documentDropped-container{
+}
+
+.documentDropped-container {
     display: flex;
     width: 65%;
     margin: auto;
-  }
-  .documentDropped{
-   padding: 2em;
-  }
+}
+
+.documentDropped {
+    padding: 2em;
+}
 
 .text-below-icon {
     display: flex;
@@ -295,4 +300,4 @@ select {
     display: flex;
     margin: auto;
     font-size: 2em;
-  }
+}
