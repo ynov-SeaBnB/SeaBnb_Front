@@ -8,8 +8,10 @@ import { ApiService } from '../api.service';
 })
 export class HomeComponent implements OnInit {
   boatsDetails: any[] = [];
+  allBoatsDetails: any[] = [];
+  selectedCountry: string | null = null;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.apiService.getBoatsDetails().subscribe((data: any[]) => {
@@ -24,6 +26,17 @@ export class HomeComponent implements OnInit {
         boat.formattedAvailability = `${firstAvailabilityKey} - ${firstAvailabilityValue}`;
         return boat;
       });
+      this.allBoatsDetails = [...this.boatsDetails];
     });
+  }
+
+  filterByCountry(country: string) {
+    if (this.selectedCountry === country) {
+      this.selectedCountry = null;
+      this.boatsDetails = [...this.allBoatsDetails];
+    } else {
+      this.selectedCountry = country;
+      this.boatsDetails = this.allBoatsDetails.filter((boat) => boat.country === country);
+    }
   }
 }

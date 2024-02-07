@@ -7,41 +7,59 @@
     <div class="centerbody">
         <div class="colorfilter">
             <div class="filter-container">
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
-                <div class="filter-item">Filter 1</div>
-                <div class="filter-item">Filter 2</div>
-                <div class="filter-item">Filter 3</div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'France'"
+                    (click)="filterByCountry('France')">
+                    <img class="size_img" src="../../assets/images/filtre/france.png" alt="Filter Image">
+                    <p class="size_text">France</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Allemagne'"
+                    (click)="filterByCountry('Allemagne')">
+                    <img class="size_img" src="../../assets/images/filtre/allemagne.png" alt="Filter Image">
+                    <p class="size_text">Allemagne</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Espagne'"
+                    (click)="filterByCountry('Espagne')">
+                    <img class="size_img" src="../../assets/images/filtre/espagne.png" alt="Filter Image">
+                    <p class="size_text">Espagne</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Portugal'"
+                    (click)="filterByCountry('Portugal')">
+                    <img class="size_img" src="../../assets/images/filtre/portugal.png" alt="Filter Image">
+                    <p class="size_text">Portugal</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Royaume-Uni'"
+                    (click)="filterByCountry('Royaume-Uni')">
+                    <img class="size_img" src="../../assets/images/filtre/royaume-uni.png" alt="Filter Image">
+                    <p class="size_text">Royaume-Uni</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Belgique'"
+                    (click)="filterByCountry('Belgique')">
+                    <img class="size_img" src="../../assets/images/filtre/belgique.png" alt="Filter Image">
+                    <p class="size_text">Belgique</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Italie'"
+                    (click)="filterByCountry('Italie')">
+                    <img class="size_img" src="../../assets/images/filtre/italie.png" alt="Filter Image">
+                    <p class="size_text">Italie</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Suisse'"
+                    (click)="filterByCountry('Suisse')">
+                    <img class="size_img" src="../../assets/images/filtre/suisse.png" alt="Filter Image">
+                    <p class="size_text">Suisse</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Suède'"
+                    (click)="filterByCountry('Suède')">
+                    <img class="size_img" src="../../assets/images/filtre/suède.png" alt="Filter Image">
+                    <p class="size_text">Suède</p>
+                </div>
+                <div class="filter-item" [class.selected]="selectedCountry === 'Grèce'"
+                    (click)="filterByCountry('Grèce')">
+                    <img class="size_img" src="../../assets/images/filtre/grèce.png" alt="Filter Image">
+                    <p class="size_text">Grèce</p>
+                </div>
             </div>
         </div>
+
         <div class="image-grid">
             <a *ngFor="let boat of boatsDetails" class="link2" href="#" routerLink="/description">
                 <div class="image-item">

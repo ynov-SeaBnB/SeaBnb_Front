@@ -13,6 +13,9 @@
     z-index: 98;
 }
 
+.selected {
+    background-color: rgb(175, 175, 175);
+}
 
 .filter-container {
     display: flex;

@@ -10,6 +10,12 @@ export class NavbarComponent {
   isScreenNineHundred: boolean = false;
   isScreenSevenHundred: boolean = false;
 
+  ngOnInit() {
+    this.onResize();
+    const currentUrl = this.router.url;
+    this.isHomePage = currentUrl === '/home' || currentUrl === '/description';
+  }
+
   @HostListener('window:resize')
   onResize() {
     this.isScreenNineHundred = window.innerWidth < 900;
@@ -25,10 +31,5 @@ export class NavbarComponent {
   }
   isHomePage: boolean = false;
 
-  constructor(private router: Router) {}
-
-  ngOnInit() {
-    const currentUrl = this.router.url;
-    this.isHomePage = currentUrl === '/home' || currentUrl === '/description';
-  }
+  constructor(private router: Router) { }
 }
