@@ -20,7 +20,7 @@ interface BoatFormData {
   equipments: string[];
   specifications: any;
   availability: any;
-  deposit: string;
+  deposit: number;
   note: number;
   propertyPapers: string[];
   idOwner: number;
@@ -32,26 +32,44 @@ interface BoatFormData {
   styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   boatFormData: BoatFormData = {
-    name: '',
-    width: 0,
-    length: 0,
-    motorized: [],
-    port: [],
-    country: '',
-    type: '',
-    skipper: '',
-    pictures: [],
-    equipments: [],
-    specifications: {},
-    availability: {},
-    deposit: '',
-    note: 0,
-    propertyPapers: [],
-    idOwner: 0,
+    name: 'pierree',
+    width: 14.7,
+    length: 3.8,
+    motorized: ["Yes", "Caterpillar 3412 Е x 2"],
+    port: ["Port de roses", "roses"],
+    country: 'Spain',
+    type: 'Schooner',
+    skipper: 'Yes',
+    pictures: [
+      "/src/assets/images/idUser/nameBateau/img1",
+      "/src/assets/images/idUser/nameBateau/img2",
+      "/src/assets/images/idUser/nameBateau/img3"
+    ],
+    equipments: ["Kitchen", "Bedroom"],
+    specifications: {
+      "AvgSpeed": 10.3,
+      "MaxSpeed": 13.8,
+      "Constructor": "Timmerman Yachts",
+      "ConstructionYear": 2014
+    },
+    availability: {
+      "2023-10-12": "2023-10-15",
+      "2023-10-18": "2023-10-23"
+    },
+    deposit: 250,
+    note: 3.9,
+    propertyPapers: [
+      "/src/assets/documents/idUser/nameBateau/carteIdentite",
+      "/src/assets/documents/idUser/nameBateau/certificatEnregistrement",
+      "/src/assets/documents/idUser/nameBateau/portEnregistrement",
+      "/src/assets/documents/idUser/nameBateau/taxeAnnuelle"
+    ],
+    idOwner: 1,
   };
+
 
   boats: Boat[] = [
     {
@@ -187,43 +205,37 @@ export class BoatsComponent {
   }
 
   onSubmit() {
-    const formData: BoatFormData = {
-      name: (document.getElementById('boatName') as HTMLInputElement).value,
-      width: parseFloat(
-        (document.getElementById('boatWidth') as HTMLInputElement).value,
-      ),
-      length: parseFloat(
-        (document.getElementById('boatLength') as HTMLInputElement).value,
-      ),
-      motorized: [
-        (document.getElementById('motorized') as HTMLSelectElement).value,
-      ],
-      port: [(document.getElementById('port') as HTMLInputElement).value],
-      country: (document.getElementById('country') as HTMLInputElement).value,
-      type: (document.getElementById('type') as HTMLInputElement).value,
-      skipper: (document.getElementById('skipper') as HTMLSelectElement).value,
-      pictures: this.images,
-      equipments: [], // Vous devrez ajouter la logique pour récupérer les équipements à partir du formulaire
-      specifications: {}, // Vous devrez ajouter la logique pour récupérer les spécifications à partir du formulaire
-      availability: {}, // Vous devrez ajouter la logique pour récupérer la disponibilité à partir du formulaire
-      deposit: (document.getElementById('deposit') as HTMLInputElement).value,
-      note: parseFloat(
-        (document.getElementById('note') as HTMLInputElement).value,
-      ),
-      propertyPapers: [], // Vous devrez ajouter la logique pour récupérer les papiers à partir du formulaire
-      idOwner: 0, // Vous devrez ajouter la logique pour récupérer l'ID du propriétaire à partir du formulaire
+    const jsonData = {
+      name: this.boatFormData.name,
+      width: this.boatFormData.width,
+      length: this.boatFormData.length,
+      motorized: this.boatFormData.motorized,
+      port: this.boatFormData.port,
+      country: this.boatFormData.country,
+      type: this.boatFormData.type,
+      skipper: this.boatFormData.skipper,
+      pictures: this.boatFormData.pictures,
+      equipments: this.boatFormData.equipments,
+      specifications: this.boatFormData.specifications,
+      availability: this.boatFormData.availability,
+      deposit: this.boatFormData.deposit,
+      note: this.boatFormData.note,
+      propertyPapers: this.boatFormData.propertyPapers,
+      idOwner: this.boatFormData.idOwner,
     };
-
-    // Appelez la méthode createBoat du service API pour envoyer les données au backend
-    this.apiService.createBoat(formData).subscribe(
-      (response) => {
-        console.log('Boat created successfully:', response);
-        this.resetForm();
+    this.apiService.createBoat(jsonData).subscribe({
+      next: async () => {
+        try {
+          console.log('Le bateau a été ajouté avec succès');
+          await this.resetForm();
+        } catch (error) {
+          console.error("Une erreur s'est produite lors de l'ajout :", error);
+        }
       },
-      (error) => {
-        console.error('Error creating boat:', error);
+      error: (error) => {
+        console.error("Une erreur s'est produite lors de l'ajout :", error);
       },
-    );
+    });
   }
 
   resetForm() {
@@ -240,7 +252,7 @@ export class BoatsComponent {
       equipments: [],
       specifications: {},
       availability: {},
-      deposit: '',
+      deposit: 0,
       note: 0,
       propertyPapers: [],
       idOwner: 0,
