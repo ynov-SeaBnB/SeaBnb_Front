@@ -1,3 +1,5 @@
+# Link for the deployment: (https://sea-bnb-front.vercel.app/home)
+
 # Documentation du Projet "Seabnb"
 
 ## Introduction
