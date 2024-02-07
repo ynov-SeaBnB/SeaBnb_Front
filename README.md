@@ -1,6 +1,4 @@
-# CD, Deployment on vercel, click here !
-
-[vercel link](https://sea-bnb-front.vercel.app/home)
+# CD, Deployment on vercel, click here : [vercel link](https://sea-bnb-front.vercel.app/home)
 
 # SeaBnBFront
 
