@@ -32,7 +32,7 @@ interface BoatFormData {
   styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {}
 
   boatFormData: BoatFormData = {
     name: '',
