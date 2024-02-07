@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   allBoatsDetails: any[] = [];
   selectedCountry: string | null = null;
 
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {}
 
   ngOnInit() {
     this.apiService.getBoatsDetails().subscribe((data: any[]) => {
@@ -36,7 +36,9 @@ export class HomeComponent implements OnInit {
       this.boatsDetails = [...this.allBoatsDetails];
     } else {
       this.selectedCountry = country;
-      this.boatsDetails = this.allBoatsDetails.filter((boat) => boat.country === country);
+      this.boatsDetails = this.allBoatsDetails.filter(
+        (boat) => boat.country === country,
+      );
     }
   }
 }
