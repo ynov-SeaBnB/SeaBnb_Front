@@ -32,44 +32,43 @@ interface BoatFormData {
   styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
-  constructor(private apiService: ApiService) { }
+  constructor(private apiService: ApiService) {}
 
   boatFormData: BoatFormData = {
     name: 'pierree',
     width: 14.7,
     length: 3.8,
-    motorized: ["Yes", "Caterpillar 3412 Е x 2"],
-    port: ["Port de roses", "roses"],
+    motorized: ['Yes', 'Caterpillar 3412 Е x 2'],
+    port: ['Port de roses', 'roses'],
     country: 'Spain',
     type: 'Schooner',
     skipper: 'Yes',
     pictures: [
-      "/src/assets/images/idUser/nameBateau/img1",
-      "/src/assets/images/idUser/nameBateau/img2",
-      "/src/assets/images/idUser/nameBateau/img3"
+      '/src/assets/images/idUser/nameBateau/img1',
+      '/src/assets/images/idUser/nameBateau/img2',
+      '/src/assets/images/idUser/nameBateau/img3',
     ],
-    equipments: ["Kitchen", "Bedroom"],
+    equipments: ['Kitchen', 'Bedroom'],
     specifications: {
-      "AvgSpeed": 10.3,
-      "MaxSpeed": 13.8,
-      "Constructor": "Timmerman Yachts",
-      "ConstructionYear": 2014
+      AvgSpeed: 10.3,
+      MaxSpeed: 13.8,
+      Constructor: 'Timmerman Yachts',
+      ConstructionYear: 2014,
     },
     availability: {
-      "2023-10-12": "2023-10-15",
-      "2023-10-18": "2023-10-23"
+      '2023-10-12': '2023-10-15',
+      '2023-10-18': '2023-10-23',
     },
     deposit: 250,
     note: 3.9,
     propertyPapers: [
-      "/src/assets/documents/idUser/nameBateau/carteIdentite",
-      "/src/assets/documents/idUser/nameBateau/certificatEnregistrement",
-      "/src/assets/documents/idUser/nameBateau/portEnregistrement",
-      "/src/assets/documents/idUser/nameBateau/taxeAnnuelle"
+      '/src/assets/documents/idUser/nameBateau/carteIdentite',
+      '/src/assets/documents/idUser/nameBateau/certificatEnregistrement',
+      '/src/assets/documents/idUser/nameBateau/portEnregistrement',
+      '/src/assets/documents/idUser/nameBateau/taxeAnnuelle',
     ],
     idOwner: 1,
   };
-
 
   boats: Boat[] = [
     {
