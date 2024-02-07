@@ -32,7 +32,7 @@ interface BoatFormData {
   styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService) { }
 
   boatFormData: BoatFormData = {
     name: 'pierree',
@@ -40,7 +40,7 @@ export class BoatsComponent {
     length: 3.8,
     motorized: ['Yes', 'Caterpillar 3412 Е x 2'],
     port: ['Port de roses', 'roses'],
-    country: 'Spain',
+    country: 'Espagne',
     type: 'Schooner',
     skipper: 'Yes',
     pictures: [
