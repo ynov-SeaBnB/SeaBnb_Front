@@ -18,13 +18,13 @@
 .colorfilter {
     width: 95%;
     position: sticky;
-    top: 95px;
+    top: 90px;
     background-color: white;
     z-index: 98;
 }
 
 .selected {
-    background-color: rgb(175, 175, 175);
+    background-color: #f0f0f0;
 }
 
 .filter-container {
