@@ -5,6 +5,16 @@
 
 /*En dessous Css pour les Filtres*/
 
+.size_img {
+    max-height: 4em;
+    width: auto;
+}
+
+.size_text {
+    margin-bottom: 0px !important;
+    margin-top: 2px !important;
+}
+
 .colorfilter {
     width: 95%;
     position: sticky;
@@ -36,12 +46,15 @@
 }
 
 .filter-item {
-    display: inline-block;
+    display: flex;
     margin-right: 1em;
     padding: 0.5em 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 70px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .filter-item:hover {
