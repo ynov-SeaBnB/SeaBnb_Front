@@ -1,81 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>
-        SeaBnb
-    </title>
-</head>
+
+<app-navbar></app-navbar>
+
 <body class="body">
-    <nav>
-        <a href="/home">
-            <img alt="logo" class="logo" src="../../assets/Seabnb.png"/>
-        </a>
-        <input type="button" value="Your Profile" routerLink="/profile">
-        <ng-icon name="heroArrowUturnLeft" class="back" routerLink="/home"></ng-icon>
-    </nav>
-    <div class="grid">
-        <div class="grid1">
-            <div>
-                <img [src]="url ? url : 'https://sandcliffsales.com/static/assets/img/team/default-profile.png'"> <br/>
-                <label for="files" class="button-file"><ng-icon name="heroCamera" class="icon"></ng-icon>Edit</label>
-                <input type='file' style="visibility:hidden;" id="files"  (change)="onSelectFile($event)">
-            </div>
-        </div>
-        <div class="grid2">
-            <form *ngIf="showForm" class="form">
-                <div class="row">
-                    <div class="column">
-                        <div class="space"><ng-icon name="heroUser" class="icon"></ng-icon>First Name :<input type="text" disabled></div>
-                        <div class="space"><ng-icon name="heroUser" class="icon"></ng-icon>Last Name :<input type="text" disabled></div>
-                        <div class="space"><ng-icon name="heroUser" class="icon"></ng-icon>Date of birth :<input type="date" disabled></div>
-                    </div>
-                    <div class="column">
-                        <div class="space"><ng-icon name="heroEnvelope" class="icon"></ng-icon>Mail Address :<input type="email" disabled></div>
-                        <div class="space"><ng-icon name="heroLockClosed" class="icon"></ng-icon>Password :<input type="password" placeholder="********" disabled></div>
-                        <div class="space"><ng-icon name="heroLanguage" class="icon"></ng-icon>Language :
-                            <select disabled>
-                                <option>English</option>
-                                <option>French</option>
-                                <option>Spanish</option>
-                                <option>Chinese</option>
-                                <option>Arabic</option>
-                                <option>Russian</option>
-                                <option>Portuguese</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <button (click)="toggleForms()" class="button-save" type="submit" role="button">Edit Profile</button>
-            </form>
-            <form *ngIf="!showForm" class="form">
-                <div class="row">
-                    <div class="column">
-                        <div class="space"><ng-icon name="heroUser" class="icon"></ng-icon>First Name :<input type="text"></div>
-                        <div class="space"><ng-icon name="heroUser" class="icon"></ng-icon>Last Name :<input type="text"></div>
-                        <div class="space"><ng-icon name="heroUser" class="icon"></ng-icon>Date of birth :<input type="date"></div>
-                    </div>
-                    <div class="column">
-                        <div class="space"><ng-icon name="heroEnvelope" class="icon"></ng-icon>Mail Address :<input type="email"></div>
-                        <div class="space"><ng-icon name="heroLockClosed" class="icon"></ng-icon>Password :<input type="password" placeholder="********"></div>
-                        <div class="space"><ng-icon name="heroLanguage" class="icon"></ng-icon>Language :
-                            <select>
-                                <option>English</option>
-                                <option>French</option>
-                                <option>Spanish</option>
-                                <option>Chinese</option>
-                                <option>Arabic</option>
-                                <option>Russian</option>
-                                <option>Portuguese</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <button class="button-save" role="button" type="submit">Save</button>
-            </form>
-        </div>
+<div class="grid">
+  <div class="grid1">
+    <div>
+      <img [src]="url ? url : 'https://sandcliffsales.com/static/assets/img/team/default-profile.png'"> <br/>
+      <label class="button-file" for="files">
+        <ng-icon class="icon" name="heroCamera"></ng-icon>
+        Edit</label>
+      <input (change)="onSelectFile($event)" id="files" style="visibility:hidden;" type='file'>
     </div>
-    <footer>
-        
-    </footer>
+  </div>
+  <div *ngIf="userProfil != null" class="grid2">
+    <form *ngIf="showForm" class="form">
+      <div class="row">
+        <div class="column">
+          <div class="space">
+            <ng-icon class="icon" name="heroUser"></ng-icon>
+            First Name :<input
+            [value]="userProfil.name"
+            disabled type="text"></div>
+          <div class="space">
+            <ng-icon class="icon" name="heroUser"></ng-icon>
+            Last Name :<input [value]="userProfil.firstName"
+                              disabled
+                              type="text"></div>
+          <div class="space">
+            <ng-icon class="icon" name="heroUser"></ng-icon>
+            Date of birth :<input
+            [value]="userProfil.birthDate"
+            disabled type="date"></div>
+        </div>
+        <div class="column">
+          <div class="space">
+            <ng-icon class="icon" name="heroEnvelope"></ng-icon>
+            Mail Address :<input
+            [value]="userProfil.emailAddress"
+            disabled type="email"></div>
+          <div *ngIf="false" class="space">
+            <ng-icon class="icon" name="heroLockClosed"></ng-icon>
+            Password :<input
+            disabled
+            placeholder="********" type="password" value="userProfil.password"></div>
+          <div class="space">
+            <ng-icon class="icon" name="heroLanguage"></ng-icon>
+            Language :
+            <select disabled>
+              <option>English</option>
+              <option>French</option>
+              <option>Spanish</option>
+              <option>Chinese</option>
+              <option>Arabic</option>
+              <option>Russian</option>
+              <option>Portuguese</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button (click)="toggleForms()" *ngIf="false" class="button-save" role="button" type="submit">Edit Profile
+      </button>
+    </form>
+    <form *ngIf="!showForm" class="form">
+      <div class="row">
+        <div class="column">
+          <div class="space">
+            <ng-icon class="icon" name="heroUser"></ng-icon>
+            First Name :<input
+            type="text"></div>
+          <div class="space">
+            <ng-icon class="icon" name="heroUser"></ng-icon>
+            Last Name :<input
+            type="text"></div>
+          <div class="space">
+            <ng-icon class="icon" name="heroUser"></ng-icon>
+            Date of birth :<input
+            type="date"></div>
+        </div>
+        <div class="column">
+          <div class="space">
+            <ng-icon class="icon" name="heroEnvelope"></ng-icon>
+            Mail Address :<input
+            type="email"></div>
+          <div class="space">
+            <ng-icon class="icon" name="heroLockClosed"></ng-icon>
+            Password :<input
+            placeholder="********" type="password"></div>
+          <div class="space">
+            <ng-icon class="icon" name="heroLanguage"></ng-icon>
+            Language :
+            <select>
+              <option>English</option>
+              <option>French</option>
+              <option>Spanish</option>
+              <option>Chinese</option>
+              <option>Arabic</option>
+              <option>Russian</option>
+              <option>Portuguese</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button class="button-save" role="button" type="submit">Save</button>
+    </form>
+  </div>
+</div>
 </body>
+
+<app-footer></app-footer>
+
 </html>

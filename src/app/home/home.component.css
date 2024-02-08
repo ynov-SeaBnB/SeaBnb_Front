@@ -5,20 +5,33 @@
 
 /*En dessous Css pour les Filtres*/
 
+.size_img {
+    max-height: 4em;
+    width: auto;
+}
+
+.size_text {
+    margin-bottom: 0px !important;
+    margin-top: 2px !important;
+}
+
 .colorfilter {
     width: 95%;
     position: sticky;
-    top: 95px;
+    top: 90px;
     background-color: white;
     z-index: 98;
 }
 
+.selected {
+    background-color: #f0f0f0;
+}
 
 .filter-container {
     display: flex;
     overflow-x: scroll;
     white-space: nowrap;
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
     margin-top: 1.5em;
@@ -33,12 +46,15 @@
 }
 
 .filter-item {
-    display: inline-block;
+    display: flex;
     margin-right: 1em;
     padding: 0.5em 1em;
     border: 1px solid #ccc;
     border-radius: 5px;
     cursor: pointer;
+    min-width: 70px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .filter-item:hover {
@@ -50,6 +66,7 @@
 
 .image-grid {
     display: grid;
+    margin-top: 6.5em;
     width: 95%;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 16px;

@@ -1,44 +1,49 @@
-<div class="dontmove">
+<header>
+  <div class="dontmove">
     <nav class="navbar">
-        <div class="logo-container">
-            <img class="logo1" src="../../assets/images/logo2.png">
-            <img class="logo2" src="../../assets/images/logo.png">
+      <div class="logo-container" routerLink="/home">
+        <img class="logo1" src="../../assets/images/logo2.png">
+        <img *ngIf="!isScreenNineHundred" class="logo2" src="../../assets/images/logo.png">
+      </div>
+
+      <div *ngIf="isHomePage">
+        <a *ngIf="!isScreenSevenHundred" class="search">
+          <span class="link">Anywhere</span>
+          <span class="link">Any week</span>
+          <span class="link">Add guest</span>
+          <div class="icon-container">
+            <img class="logo4" src="../../assets/images/loupe.png">
+          </div>
+        </a>
+      </div>
+
+      <div class="right-bar">
+        <div *ngIf="!isScreenSevenHundred" class="user-profile">
+          <a class="link" href="#">SeaBnB your home</a>
         </div>
 
-        <div>
-            <a class="search" href="#section-id">
-                <span class="link">Anywhere</span>
-                <span class="link">Any week</span>
-                <span class="link">Add guest</span>
-                <div class="icon-container">
-                    <img class="logo4" src="../../assets/images/loupe.png">
-                </div>
-            </a>
+        <div (click)="openModal()" class="user-profile_menu">
+          <a class="sectionId">
+            <ng-icon class="logo3" name="heroBars3"></ng-icon>
+            <ng-icon class="logo5" name="heroUserCircle"></ng-icon>
+          </a>
         </div>
-
-        <div class="right-bar">
-            <div class="user-profile">
-                <a class="link" href="#section-id">SeaBnB your home</a>
-            </div>
-
-            <div class="user-profile_menu" (click)="openModal()">
-                <a class="sectionId">
-                    <ng-icon class="logo3" name="heroBars3"></ng-icon>
-                    <ng-icon class="logo5" name="heroUserCircle"></ng-icon>
-                </a>
-            </div>
-        </div>
+      </div>
     </nav>
     <div class="horizontal_line">
     </div>
-</div>
-<div class="overlay" (click)="closeModal()" *ngIf="showModal">
-    <div class="modal" *ngIf="showModal">
-        <div class="modal-content">
-            <span class="close" (click)="closeModal()">&times;</span>
-            <button class="BtnMenu" routerLink="/login">Log In</button>
-            <button class="BtnMenu" routerLink="/register">Register</button>
-            <button class="BtnMenu" routerLink="/profil">Your profile</button>
-        </div>
+  </div>
+  <div (click)="closeModal()" *ngIf="showModal" class="overlay">
+    <div *ngIf="showModal" class="modal">
+      <div class="modal-content">
+        <span (click)="closeModal()" *ngIf="!isScreenSevenHundred" class="close">&times;</span>
+        <button *ngIf="!isLoggedIn()" class="BtnMenu" routerLink="/login">Log In</button>
+        <button *ngIf="!isLoggedIn()" class="BtnMenu" routerLink="/register">Register</button>
+        <button *ngIf="isLoggedIn()" class="BtnMenu" routerLink="/profile">Your profile</button>
+        <button *ngIf="isLoggedIn()" class="BtnMenu" routerLink="/boats">Add boat</button>
+        <button *ngIf="isLoggedIn()" class="BtnMenu" routerLink="/properties">Your properties</button>
+        <button (click)="logOut()" *ngIf="isLoggedIn()" class="BtnMenu">Sign out</button>
+      </div>
     </div>
-</div>
+  </div>
+</header>

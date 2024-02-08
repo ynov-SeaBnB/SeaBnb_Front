@@ -1,21 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-description',
   templateUrl: './description.component.html',
-  styleUrls: ['./description.component.css']
+  styleUrls: ['./description.component.css'],
 })
-export class DescriptionComponent {
+export class DescriptionComponent implements OnInit {
+  boatId: string | null | undefined;
   minDate: string;
   selectedDate: string;
   availableSlots: { label: string; value: string }[] = [];
+  boatsDetails: any;
+  allBoatsDetails: any[] = [];
 
-  constructor() {
-    const currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() + 1);
-    this.minDate = currentDate.toISOString().substring(0, 10);
-    this.selectedDate = '';
+  constructor(
+    private apiService: ApiService,
+    private route: ActivatedRoute,
+  ) {
+    this.minDate = new Date().toISOString().split('T')[0];
+    this.selectedDate = this.minDate;
+  }
+
+  ngOnInit(): void {
+    this.boatId = this.route.snapshot.paramMap.get('id');
+    this.apiService.getBoatDetails(this.boatId).subscribe((boatDetails) => {
+      this.boatsDetails = boatDetails;
+      console.log(this.boatsDetails);
+    });
+    this.apiService.getBoatsDetails().subscribe((allBoatsDetails) => {
+      this.allBoatsDetails = allBoatsDetails;
+    });
   }
 
   onDateChange(date: string): void {
