@@ -7,6 +7,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -38,6 +39,7 @@ export class RegisterComponent {
   constructor(
     private fb: FormBuilder,
     private apiService: ApiService,
+    private router: Router,
   ) {}
 
   onSubmit() {
@@ -60,7 +62,11 @@ export class RegisterComponent {
 
       // Call your API service to register the user
       this.apiService.register(userData).subscribe(
-        (success: any) => console.log('User registered', success),
+        (success: any) => {
+          console.log('User registered', success);
+          localStorage.setItem('id', success.id);
+          this.router.navigate(['/home']);
+        },
         (error: any) => console.error('Registration failed', error),
       );
     }
