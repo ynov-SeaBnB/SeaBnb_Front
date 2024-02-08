@@ -32,6 +32,10 @@ export class ApiService {
     return this.http.get<any[]>(`${this.API_URL}/boats`);
   }
 
+  getBoatDetails(id: string | null | undefined): Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/boats/${id}`);
+  }
+
   createBoat(boatData: any): Observable<any> {
     return this.http.post(`${this.API_URL}/boats`, boatData);
   }

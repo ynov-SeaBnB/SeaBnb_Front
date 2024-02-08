@@ -4,19 +4,18 @@ import { HomeComponent } from './home/home.component';
 import { ProfilComponent } from './profil/profil.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { OwnerComponent } from './owner/owner.component';
 import { DescriptionComponent } from './description/description.component';
 import { BoatsComponent } from './boats/boats.component';
 import { PropertiesComponent } from './properties/properties.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'boat/:id', component: DescriptionComponent },
   { path: 'home', component: HomeComponent },
   { path: 'profile', component: ProfilComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'properties', component: PropertiesComponent },
-  { path: 'description', component: DescriptionComponent },
   { path: 'boats', component: BoatsComponent },
 ];
 
