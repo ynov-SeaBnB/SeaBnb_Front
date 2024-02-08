@@ -1,8 +1,10 @@
-# Link for the deployment: (https://sea-bnb-front.vercel.app/home)
+# CD, Deployment on vercel, click here : [vercel link](https://sea-bnb-front.vercel.app/home)
 
-# Documentation du Projet "Seabnb"
+# SeaBnBFront
 
-## Introduction
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+
+## Development server
 
 Bienvenue dans la documentation officielle de "Seabnb", une plateforme web conçue pour la location de bateaux, offrant non seulement des options d'hébergement mais également la possibilité d'utiliser ces bateaux. Inspiré
 par le modèle d'Airbnb, ce document a pour objectif de mettre à votre disposition toutes les informations essentielles nécessaires pour comprendre, utiliser et contribuer au projet, que ce soit en tant qu'utilisateur ou

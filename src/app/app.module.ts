@@ -33,6 +33,7 @@ import { FormsModule } from '@angular/forms';
 import { ReservationsComponent } from './reservations/reservations.component';
 import { PropertiesComponent } from './properties/properties.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
