@@ -7,7 +7,7 @@
       </div>
 
       <div *ngIf="isHomePage">
-        <a *ngIf="!isScreenSevenHundred" class="search" href="#section-id">
+        <a *ngIf="!isScreenSevenHundred" class="search">
           <span class="link">Anywhere</span>
           <span class="link">Any week</span>
           <span class="link">Add guest</span>
@@ -40,8 +40,8 @@
         <button *ngIf="!isLoggedIn()" class="BtnMenu" routerLink="/login">Log In</button>
         <button *ngIf="!isLoggedIn()" class="BtnMenu" routerLink="/register">Register</button>
         <button *ngIf="isLoggedIn()" class="BtnMenu" routerLink="/profile">Your profile</button>
-        <button class="BtnMenu" routerLink="/boats">Add boat</button>
-        <button class="BtnMenu" routerLink="/properties">Your properties</button>
+        <button *ngIf="isLoggedIn()" class="BtnMenu" routerLink="/boats">Add boat</button>
+        <button *ngIf="isLoggedIn()" class="BtnMenu" routerLink="/properties">Your properties</button>
         <button (click)="logOut()" *ngIf="isLoggedIn()" class="BtnMenu">Sign out</button>
       </div>
     </div>

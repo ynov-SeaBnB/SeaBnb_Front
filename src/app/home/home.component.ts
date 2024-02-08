@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.apiService.getBoatsDetails().subscribe((data: any[]) => {
       this.boatsDetails = data.map((boat) => {
+        boat.city = JSON.parse(boat.port)[0];
+
         boat.port = JSON.parse(boat.port)[1];
 
         const availabilityObject = JSON.parse(boat.availability);

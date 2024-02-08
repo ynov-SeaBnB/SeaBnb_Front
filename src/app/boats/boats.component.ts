@@ -32,14 +32,12 @@ interface BoatFormData {
   styleUrls: ['./boats.component.css'],
 })
 export class BoatsComponent {
-  constructor(private apiService: ApiService) {}
-
   boatFormData: BoatFormData = {
     name: '',
     width: 0,
     length: 0,
     motorized: ['Yes', 'Caterpillar 3412 Е x 2'],
-    port: ['efzgr', 'aezgr'],
+    port: ['', ''],
     country: '',
     type: 'pas la bonne donnée',
     skipper: '',
@@ -69,7 +67,6 @@ export class BoatsComponent {
     ],
     idOwner: 1,
   };
-
   boats: Boat[] = [
     {
       name: 'Engine',
@@ -112,6 +109,12 @@ export class BoatsComponent {
       imagePath: '../../assets/images/icons/yacht.png',
     },
   ];
+  selectedOption: string = 'option2';
+  inputText: string = '';
+  images: string[] = [];
+  documents: File[] = [];
+
+  constructor(private apiService: ApiService) {}
 
   toggleBackgroundColor(clickedBoat: Boat) {
     this.boats.forEach((boat) => {
@@ -122,12 +125,6 @@ export class BoatsComponent {
     this.boatFormData.type = clickedBoat.name;
     clickedBoat.isActive = !clickedBoat.isActive;
   }
-
-  selectedOption: string = 'option2';
-  inputText: string = '';
-
-  images: string[] = [];
-  documents: File[] = [];
 
   onDragOver(event: Event): void {
     event.preventDefault();
@@ -150,6 +147,7 @@ export class BoatsComponent {
       }
     }
   }
+
   onDropDocument(event: DragEvent) {
     // Gérer le glisser-déposer pour les documents
     const files = event.dataTransfer?.files;
@@ -195,11 +193,13 @@ export class BoatsComponent {
       }
     };
   }
+
   deleteImage(index: number): void {
     if (index >= 0 && index < this.images.length) {
       this.images.splice(index, 1);
     }
   }
+
   deleteDocument(index: number) {
     this.documents.splice(index, 1);
   }

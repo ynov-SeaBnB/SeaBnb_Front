@@ -29,7 +29,7 @@
 <div class="form-container">
   <div class="col">
     Boat's name : <input [(ngModel)]="boatFormData.name" type="text">
-    City : <input type="text">
+    City : <input [(ngModel)]="boatFormData.port[1]" type="text">
     Is your boat rented with skipper ?
     <select [(ngModel)]="boatFormData.skipper">
       <option disabled selected value="">Select...</option>
