@@ -13,40 +13,25 @@ export class DescriptionComponent implements OnInit {
   minDate: string;
   selectedDate: string;
   availableSlots: { label: string; value: string }[] = [];
-  boatsDetails: any[] = [];
+  boatsDetails: any;
   allBoatsDetails: any[] = [];
 
   constructor(
-    private route: ActivatedRoute,
     private apiService: ApiService,
+    private route: ActivatedRoute,
   ) {
-    const currentDate = new Date();
-    currentDate.setDate(currentDate.getDate() + 1);
-    this.minDate = currentDate.toISOString().substring(0, 10);
-    this.selectedDate = '';
+    this.minDate = new Date().toISOString().split('T')[0];
+    this.selectedDate = this.minDate;
   }
 
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params) => {
-      this.boatId = params.get('id');
-      this.apiService.getBoatsDetails().subscribe((data: any[]) => {
-        this.boatsDetails = data.map((boat) => {
-          boat.city = JSON.parse(boat.port)[0];
-
-          boat.port = JSON.parse(boat.port)[1];
-
-          const availabilityObject = JSON.parse(boat.availability);
-
-          const firstAvailabilityKey = Object.keys(availabilityObject)[0];
-          const firstAvailabilityValue =
-            availabilityObject[firstAvailabilityKey];
-
-          boat.formattedAvailability = `${firstAvailabilityKey} - ${firstAvailabilityValue}`;
-          return boat;
-        });
-
-        this.allBoatsDetails = [...this.boatsDetails];
-      });
+    this.boatId = this.route.snapshot.paramMap.get('id');
+    this.apiService.getBoatDetails(this.boatId).subscribe((boatDetails) => {
+      this.boatsDetails = boatDetails;
+      console.log(this.boatsDetails);
+    });
+    this.apiService.getBoatsDetails().subscribe((allBoatsDetails) => {
+      this.allBoatsDetails = allBoatsDetails;
     });
   }
 

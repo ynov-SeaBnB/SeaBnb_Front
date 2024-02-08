@@ -25,8 +25,20 @@
              src="https://media.istockphoto.com/id/498283106/fr/photo/sous-marine-de-plongeur-explorer-et-profiter-de-la-vie-aquatique-de-coral-reef.jpg?s=612x612&w=0&k=20&c=wmoEpVIsNOCPIiNVBS3vB71mJJczvOqm-OYHG5uRFR0="/>
       </div>
     </div>
+    <h2>Boat Name : </h2>
+    {{boatsDetails.name}}
+    <h2>Boat Type : </h2>
+    {{boatsDetails.type}}
+    <h2>Rating : </h2>
+    {{boatsDetails.note}}
+    <h2>Boat length and width : </h2>
+    {{boatsDetails.length}} x
+    {{boatsDetails.width}}
+    <h2>Boat port : </h2>
+    {{boatsDetails.port}}
     <div class="container">
       <div class="left-column">
+        <h2>Description : </h2>
         <p class="description">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
           consectetur, nisl vitae tincidunt ultricies, nunc nisl aliquam nunc,
@@ -45,8 +57,14 @@
         </p>
       </div>
       <div class="right-column">
-        <h2>80€ par jour</h2>
+        <h2>Price :</h2>
+        <p class="price">{{boatsDetails.deposit}} €</p>
 
+        <h2>Country :</h2>
+        <p class="country">{{boatsDetails.country}}</p>
+
+        <h2> Boat availability </h2>
+        <p class="availability">{{boatsDetails.availability}}</p>
 
         <form #f="ngForm" (ngSubmit)="onSubmit(f)">
           <label for="date">Date :</label>
@@ -69,7 +87,7 @@
       </div>
     </div>
     <div class="map">
-      <h2>Où se situe le club</h2>
+      <h2>Where can i find this boat ?</h2>
       <iframe
         allowfullscreen=""
         height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"

@@ -32,7 +32,7 @@ export class ApiService {
     return this.http.get<any[]>(`${this.API_URL}/boats`);
   }
 
-  getBoatDetails(id: string | null | undefined): Observable<any> {
+  getBoatDetails(id: string | null): Observable<any> {
     return this.http.get<any>(`${this.API_URL}/boats/${id}`);
   }
 
